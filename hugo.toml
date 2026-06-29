@@ -1,4 +1,4 @@
 baseURL = 'https://hankamokra.cz/'
 languageCode = 'cs'
 title = 'Hanka Mokrá'
-theme = "ananke"
+theme = "hanka"

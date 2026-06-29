@@ -1,0 +1,697 @@
+{{ define "main" }}
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.zb { font-family: 'Montserrat', sans-serif; color: #1A1A1A; max-width: 100%; }
+
+.zb-card-img { background:#fff; border:1.5px solid #D4C4A0; border-radius:20px; overflow:hidden; box-shadow:0 4px 20px rgba(201,168,76,0.12); }
+.zb-card-body { padding:1.25rem 1.25rem 1.5rem; }
+/* HERO */
+.zb-hero {
+  position: relative; width: 100%; min-height: 560px; overflow: hidden;
+}
+.zb-hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('/images/hero-akd.jpg');
+  background-size: cover; background-position: center top; z-index: 0;
+}
+.zb-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 42%, rgba(255,255,255,0.8) 58%, rgba(255,255,255,0) 100%);
+  z-index: 1;
+}
+.zb-hero-text {
+  position: relative; z-index: 2;
+  padding: 3.5rem 3rem 3.5rem 2.5rem;
+  max-width: 52%; min-height: 560px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.zb-badge {
+  display: inline-block; background: #C9A84C;
+  color: #fff; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 7px 20px; border-radius: 50px; margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(201,168,76,0.3);
+}
+.zb-hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px; font-weight: 600; line-height: 1.2; color: #1A1A1A;
+  margin-bottom: 0.75rem;
+}
+.zb-hero-h1::after {
+  content: ''; display: block; height: 2px; width: 60%;
+  background: linear-gradient(to right, #C9A84C, #E8D07A); margin-top: 10px;
+}
+.zb-hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-style: italic; color: #C9A84C; line-height: 1.4; margin: 1rem 0 1.25rem;
+}
+.zb-hero-p { font-size: 15px; color: #5A5A5A; line-height: 1.85; margin-bottom: 2rem; }
+
+/* TLAČÍTKA */
+.zb-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #C9A84C, #E8D07A, #C9A84C);
+  color: #fff; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.9rem 2.5rem; border-radius: 50px;
+  text-decoration: none; text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 16px rgba(201,168,76,0.35); align-self: flex-start;
+}
+.zb-btn:hover { opacity: 0.9; color: #fff; }
+
+/* ZLATÝ PRUH */
+.zb-gold-bar { height: 2px; background: linear-gradient(to right, transparent, #C9A84C, #E8D07A, #C9A84C, transparent); }
+.zb-diamond { display: flex; align-items: center; gap: 1rem; padding: 2rem 2.5rem; background: #fff; }
+.zb-diamond .line { flex: 1; height: 0.5px; background: #E8E0D0; }
+.zb-diamond .gem { width: 8px; height: 8px; background: #C9A84C; transform: rotate(45deg); }
+
+/* SEKCE */
+.zb-sec { background: #fff; padding: 4rem 2.5rem; }
+.zb-sec-warm { background: #FDFBF7; padding: 4rem 2.5rem; }
+
+/* LABELY & NADPISY */
+.zb-label { font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A84C; margin-bottom: 0.75rem; font-family: 'Montserrat', sans-serif; }
+.zb-h2 { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600; color: #1A1A1A; line-height: 1.2; margin-bottom: 1.25rem; }
+.zb-p { font-size: 16px; color: #5A5A5A; line-height: 1.85; font-family: 'Montserrat', sans-serif; }
+
+/* ZAOBLENÉ KARTIČKY */
+.zb-cards2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2rem; }
+.zb-cards3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 1.25rem; margin-top: 2rem; }
+.zb-card {
+  background: #fff; border: 1.5px solid #D4C4A0; border-radius: 20px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.12);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.zb-card:hover { box-shadow: 0 8px 32px rgba(201,168,76,0.15); transform: translateY(-2px); }
+.zb-card-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, #F5EDD5, #EDD98A);
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  font-size: 18px; margin-bottom: 1rem; color: #8B6A1A;
+}
+.zb-card-title { font-size: 15px; font-weight: 700; color: #1A1A1A; margin-bottom: 0.6rem; }
+.zb-card-text { font-size: 15px; color: #5A5A5A; line-height: 1.7; }
+
+/* CITÁT — LOSOSOVÝ */
+.zb-quote-block {
+  background: #F5D5C8; border-radius: 20px;
+  padding: 3rem 2.5rem; text-align: center; margin: 0 2.5rem 0;
+}
+.zb-quote-mark { font-size: 60px; color: #C9A84C; line-height: 0.5; display: block; margin-bottom: 1.25rem; font-family: Georgia, serif; }
+.zb-quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-style: italic; color: #3A2018; line-height: 1.7;
+}
+
+/* SEZNAM */
+.zb-list { list-style: none; margin-top: 1.5rem; }
+.zb-list li {
+  display: flex; gap: 1rem; padding: 0.6rem 0;
+  border-bottom: none;
+  font-size: 15px; color: #2A2A2A; line-height: 1.7; align-items: flex-start;
+}
+.zb-list li::before { content: "◆"; color: #C9A84C; font-size: 8px; flex-shrink: 0; margin-top: 6px; }
+
+/* STATS */
+.zb-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 2rem; }
+.zb-stat {
+  text-align: center; padding: 1.5rem 1rem;
+  border-radius: 20px; background: #fff;
+  border: 1.5px solid #D4C4A0;
+  box-shadow: 0 2px 12px rgba(201,168,76,0.12);
+}
+.zb-stat-n { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: #C9A84C; }
+.zb-stat-l { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-top: 4px; }
+
+/* TÉMATA */
+.zb-topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px,1fr)); gap: 1rem; margin-top: 2rem; }
+.zb-topic {
+  background: #fff; border: 1.5px solid #D4C4A0; border-radius: 14px;
+  padding: 1.1rem 1rem; text-align: center;
+  font-size: 14px; font-weight: 600; color: #2A2A2A;
+  box-shadow: 0 2px 8px rgba(201,168,76,0.08);
+}
+.zb-topic-dot { width: 8px; height: 8px; background: #C9A84C; border-radius: 50%; margin: 0 auto 0.6rem; }
+
+/* MODULY */
+.zb-mod { border-bottom: 0.5px solid #EDE8DF; }
+.zb-mod-header { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 0; cursor: pointer; }
+.zb-mod-header:hover .zb-mod-title { color: #C9A84C; }
+.zb-mod-num {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: linear-gradient(135deg, #F5EDD5, #EDD98A);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #8B6A1A; flex-shrink: 0;
+}
+.zb-mod-title { font-size: 14px; font-weight: 600; color: #1A1A1A; flex: 1; transition: color 0.2s; }
+.zb-mod-count { font-size: 12px; color: #888; flex-shrink: 0; }
+.zb-mod-arrow { font-size: 18px; color: #C9A84C; transition: transform 0.2s; flex-shrink: 0; }
+.zb-mod-body { display: none; padding: 0 0 1.25rem 3rem; }
+.zb-mod-body.open { display: block; }
+.zb-lessons { list-style: none; }
+.zb-lessons li { padding: 0.4rem 0; font-size: 13px; color: #5A5A5A; border-bottom: 0.5px solid #F5F5F5; display: flex; gap: 0.75rem; }
+.zb-lessons li:last-child { border-bottom: none; }
+.zb-lessons li::before { content: "›"; color: #C9A84C; font-weight: 700; }
+.zb-mod-note { font-size: 12px; color: #C9A84C; margin-top: 0.5rem; font-style: italic; }
+
+/* PRŮVODKYNĚ */
+.zb-guides { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+.zb-guide-card {
+  background: #fff; border: 1px solid #EDE8DF; border-radius: 20px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.07);
+}
+.zb-guide-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: #1A1A1A; margin-bottom: 4px; }
+.zb-guide-role { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #C9A84C; margin-bottom: 1rem; }
+.zb-guide-text { font-size: 13px; color: #5A5A5A; line-height: 1.8; }
+.zb-guide-link { margin-top: 1rem; font-size: 13px; }
+.zb-guide-link a { color: #C9A84C; text-decoration: none; font-weight: 600; }
+
+/* CTA */
+.zb-cta { text-align: center; padding: 4rem 2.5rem; background: #FDFBF7; }
+.zb-price { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 600; color: #C9A84C; line-height: 1; margin-bottom: 0.5rem; }
+.zb-price-sub { font-size: 13px; color: #888; margin-bottom: 2rem; letter-spacing: 0.05em; }
+.zb-cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #C9A84C, #E8D07A, #C9A84C);
+  color: #fff; font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 1.1rem 3.5rem; border-radius: 50px;
+  text-decoration: none; text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+}
+.zb-guarantee { font-size: 12px; color: #888; margin-top: 1.25rem; letter-spacing: 0.04em; }
+
+/* ZÁVĚR */
+.zb-closing { text-align: center; padding: 3rem 2.5rem; background: #fff; }
+.zb-closing-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: #5A5A5A; line-height: 1.85; max-width: 500px; margin: 0 auto; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .zb-hero-text { max-width: 100%; background: rgba(255,255,255,0.95); }
+  .zb-hero-overlay { background: rgba(255,255,255,0.5); }
+  .zb-hero-h1 { font-size: 28px; }
+  .zb-cards2, .zb-guides { grid-template-columns: 1fr; }
+  .zb-quote-block { margin: 0; border-radius: 0; }
+  .zb-sec, .zb-sec-warm { padding: 3rem 1.5rem; }
+}
+</style>
+
+<div class="zb">
+
+  <!-- HERO -->
+  <div class="zb-hero">
+    <div class="zb-hero-bg"></div>
+    <div class="zb-hero-overlay"></div>
+    <div class="zb-hero-text">
+      <div class="zb-badge">Online kurz — metoda JIH®</div>
+      <h1 class="zb-hero-h1">Automatická kresba diagnostická metodou JIH®</h1>
+      <p class="zb-hero-sub">Nauč se rozumět sobě, svým pocitům i souvislostem svého života</p>
+      <p class="zb-hero-p">Co kdyby existoval jednoduchý nástroj, díky kterému bys dokázala porozumět tomu, co se právě děje ve tvém životě?</p>
+      <a href="#zb-cta" class="zb-btn">Chci se zapsat →</a>
+    </div>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- OTÁZKY -->
+  <div class="zb-sec-warm">
+    <div class="zb-label">Poznáváš se?</div>
+    <h2 class="zb-h2">Ptáš se stále dokola…</h2>
+    <ul class="zb-list">
+      <li>Proč se mi tato situace opakuje?</li>
+      <li>Proč se cítím tak, jak se cítím?</li>
+      <li>Proč mě bolí tělo?</li>
+      <li>Odkud přichází moje strachy, pochybnosti nebo nepohodlí?</li>
+      <li>Jak si mohu pomoci sama?</li>
+    </ul>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- CO JE AKD -->
+  <div class="zb-sec">    <div class="zb-label">Co je AKD</div>
+    <h2 class="zb-h2">Jedinečný diagnostický<br>a terapeutický nástroj</h2>
+    <p class="zb-p">Automatická kresba diagnostická propojuje kresbu, vědomé vnímání a práci s energií metodou JIH®. Pomocí jednoduché kresby a sedmi základních barev se učíš vnímat souvislosti svého života, nacházet zdroje nepohodlí a uvolňovat je.</p>
+    <p style="font-size:1.15rem;font-weight:600;color:#2C2C2C;margin-top:1.5rem;font-style:italic;">Nepotřebuješ umět kreslit. Nepotřebuješ žádné předchozí zkušenosti.</p>
+    <div class="zb-cards3">
+        <div class="zb-card-img"><img src="/images/AKD_1.jpg" alt="Kresba" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Kresba</div><div class="zb-card-text">Jednoduchý nástroj dostupný kdykoliv a kdekoliv</div></div></div>
+        <div class="zb-card-img"><img src="/images/Energie_AKD.jpg" alt="Vědomé vnímání" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Vědomé vnímání</div><div class="zb-card-text">Aktivace hlubšího vnímání sebe a svého života</div></div></div>
+        <div class="zb-card-img"><img src="/images/Vědomí_AKD.jpg" alt="Energie JIH®" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Energie JIH®</div><div class="zb-card-text">Práce s energií na úrovni vědomí a vnímání skrze tělo.</div></div></div>
+        <div class="zb-card-img"><img src="/images/Změna_AKD.jpg" alt="Osobní změna" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Osobní změna</div><div class="zb-card-text">Reálná transformace v každodenním životě</div></div></div>
+    </div>
+    </div>
+  </div>
+
+<div class="zb-gold-bar"></div>
+
+  <!-- CO SE NAUČÍŠ -->
+  <div class="zb-sec-warm">
+    <div class="zb-label">Výsledky kurzu</div>
+    <h2 class="zb-h2">Co se v kurzu naučíš?</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 2rem">
+      <ul class="zb-list">
+        <li>Pracovat se sedmi barvami AKD</li>
+        <li>Diagnostikovat pocity a životní situace</li>
+        <li>Aktivovat vědomé vnímání a cítění</li>
+        <li>Rozpoznávat zdroje nepohodlí</li>
+      </ul>
+      <ul class="zb-list">
+        <li>Čistit stará omezení metodou JIH®</li>
+        <li>Nastavovat novou energii do prosperity</li>
+        <li>Pracovat s kolektivním vědomím a egem</li>
+        <li>Pracovat sama se sebou každý den</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- PŘÍNOSY — zaoblené kartičky -->
+  <div class="zb-sec">
+    <div class="zb-label">Přínosy</div>
+    <h2 class="zb-h2">Co ti kurz přinese?</h2>
+    <div class="zb-cards2">
+      <div class="zb-card"><div class="zb-card-icon">✿</div><div class="zb-card-title">Úleva & svoboda</div><div class="zb-card-text">Úleva od starých příběhů a nový pohled na životní situace</div></div>
+      <div class="zb-card"><div class="zb-card-icon">◇</div><div class="zb-card-title">Nový pohled</div><div class="zb-card-text">Jiný, svobodnější pohled na životní situace kolem tebe</div></div>
+      <div class="zb-card"><div class="zb-card-icon">∞</div><div class="zb-card-title">Samostatnost</div><div class="zb-card-text">Možnost pracovat sama se sebou kdykoliv potřebuješ</div></div>
+    </div>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- CITÁT — LOSOSOVÝ -->
+  <div class="zb-sec" style="padding-top:3rem;padding-bottom:3rem">
+    <div class="zb-quote-block">
+      <span class="zb-quote-mark">"</span>
+      <div class="zb-quote-text">Automatická kresba diagnostická není jen kurz.<br>Je to cesta k většímu porozumění sobě.<br>Cesta k vlastní síle a vnitřní jistotě.</div>
+    </div>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+
+<!-- ============================================================
+     SEKCE: 7 BAREV AKD
+     Vložit do themes/hanka/layouts/_default/kurz-akd.html
+     na místo, kde chcete sekci zobrazit.
+     Fotku pastelek uložte do /static/images/pastelky-akd.jpg
+     ============================================================ -->
+
+<section class="akd-barvy-section">
+  <div class="akd-barvy-inner">
+
+    <!-- Nadpis sekce -->
+    <div class="akd-barvy-header">
+      <div class="akd-gold-line"></div>
+      <h2 class="akd-barvy-title">7 barev AKD</h2>
+      <p class="akd-barvy-subtitle">Každá barva nese jedinečnou energii a ukazuje jiný aspekt vašeho vnitřního světa.</p>
+      <div class="akd-gold-line"></div>
+    </div>
+
+    <!-- Dvousloupcový layout: fotka vlevo, barvy vpravo -->
+    <div class="akd-barvy-layout">
+
+      <!-- Levý sloupec: fotka pastelek -->
+      <div class="akd-barvy-foto">
+        <img src="/images/pastelky-akd.jpg" alt="Pastelky AKD" class="akd-pastelky-img" />
+        <div class="akd-foto-caption">Nástroj, který mluví za vás</div>
+      </div>
+
+      <!-- Pravý sloupec: seznam barev -->
+      <div class="akd-barvy-list">
+
+        <!-- 1. ČERVENÁ -->
+        <div class="akd-barva-item">
+          <div class="akd-barva-dot" style="background:#C0392B;"></div>
+          <div class="akd-barva-text">
+            <span class="akd-barva-nazev" style="color:#C0392B;">Červená</span>
+            <span class="akd-barva-podtitul">Energie života, lásky a projevu</span>
+            <p>Základní životní energie — srdce, vitalita, chuť tvořit a milovat. Ukazuje váš vztah k tělu, lásce k sobě i schopnosti jít vpřed.</p>
+          </div>
+        </div>
+
+        <!-- 2. ORANŽOVÁ -->
+        <div class="akd-barva-item">
+          <div class="akd-barva-dot" style="background:#E67E22;"></div>
+          <div class="akd-barva-text">
+            <span class="akd-barva-nazev" style="color:#E67E22;">Oranžová</span>
+            <span class="akd-barva-podtitul">Tělo, zdraví a fyzická rovnováha</span>
+            <p>Moudrost buněk, vitalita a schopnost regenerace. Odhaluje, jak žijete ve svém těle a zda respektujete jeho přirozené hranice.</p>
+          </div>
+        </div>
+
+        <!-- 3. ŽLUTÁ -->
+        <div class="akd-barva-item">
+          <div class="akd-barva-dot" style="background:#F1C40F;"></div>
+          <div class="akd-barva-text">
+            <span class="akd-barva-nazev" style="color:#C9A84C;">Žlutá</span>
+            <span class="akd-barva-podtitul">Napojení na zdroj, víra a vnitřní klid</span>
+            <p>Barva světla a důvěry v život. Propojuje duchovní rovinu s každodenní realitou a ukazuje, zda cítíte, že „nejste na všechno sami".</p>
+          </div>
+        </div>
+
+        <!-- 4. ZELENÁ -->
+        <div class="akd-barva-item">
+          <div class="akd-barva-dot" style="background:#27AE60;"></div>
+          <div class="akd-barva-text">
+            <span class="akd-barva-nazev" style="color:#27AE60;">Zelená</span>
+            <span class="akd-barva-podtitul">Ukotvení, sebe-přijetí a vnitřní stabilita</span>
+            <p>Energie zakořenění a sebehodnoty. Jako strom s pevnými kořeny — uzemňuje vás v přítomnosti a dává sílu růst bez ztráty sebe sama.</p>
+          </div>
+        </div>
+
+        <!-- 5. MODRÁ -->
+        <div class="akd-barva-item">
+          <div class="akd-barva-dot" style="background:#2980B9;"></div>
+          <div class="akd-barva-text">
+            <span class="akd-barva-nazev" style="color:#2980B9;">Modrá</span>
+            <span class="akd-barva-podtitul">Tok, proudění a životní stabilita</span>
+            <p>Barva jako řeka — odhaluje, jak plyne vaše energie, zda žijete v rovnováze, a jak umíte přijímat péči i dávat bez ztráty sebe.</p>
+          </div>
+        </div>
+
+        <!-- 6. ČERNÁ -->
+        <div class="akd-barva-item">
+          <div class="akd-barva-dot" style="background:#2C2C2C;"></div>
+          <div class="akd-barva-text">
+            <span class="akd-barva-nazev" style="color:#2C2C2C;">Černá</span>
+            <span class="akd-barva-podtitul">Diagnostická a klíčující barva</span>
+            <p>Hloubková diagnostika energetických bloků. Pojmenovává zdroje neprůchodnosti, stará zranění a místa, kde je třeba přinést světlo.</p>
+          </div>
+        </div>
+
+        <!-- 7. HNĚDÁ -->
+        <div class="akd-barva-item">
+          <div class="akd-barva-dot" style="background:#8B5E3C;"></div>
+          <div class="akd-barva-text">
+            <span class="akd-barva-nazev" style="color:#8B5E3C;">Hnědá</span>
+            <span class="akd-barva-podtitul">Obnovující a čistící energie</span>
+            <p>Barva půdy a přirozené obnovy. Pomáhá vyčistit a integrovat to, co bylo odkryto — uzemňuje a připravuje prostor pro nový začátek.</p>
+          </div>
+        </div>
+
+      </div><!-- /.akd-barvy-list -->
+    </div><!-- /.akd-barvy-layout -->
+
+  </div><!-- /.akd-barvy-inner -->
+</section>
+
+<!-- ============================================================
+     CSS — vložte do <style> v hlavičce nebo do vašeho CSS souboru
+     ============================================================ -->
+<style>
+/* ---- Sekce wrapper ---- */
+.akd-barvy-section {
+  background: #fff;
+  padding: 80px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.akd-barvy-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---- Nadpis ---- */
+.akd-barvy-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.akd-gold-line {
+  width: 80px;
+  height: 2px;
+  background: #C9A84C;
+  margin: 16px auto;
+}
+
+.akd-barvy-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: #2C2C2C;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.akd-barvy-subtitle {
+  font-size: 1rem;
+  color: #6b6b6b;
+  margin: 8px 0 0;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+/* ---- Dvousloupcový layout ---- */
+.akd-barvy-layout {
+  display: flex;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+/* ---- Fotka vlevo ---- */
+.akd-barvy-foto {
+  flex: 0 0 340px;
+  position: sticky;
+  top: 100px;
+  text-align: center;
+}
+
+.akd-pastelky-img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: contain;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  
+}
+
+.akd-foto-caption {
+  margin-top: 14px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: #C9A84C;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Seznam barev vpravo ---- */
+.akd-barvy-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ---- Jednotlivá barva ---- */
+.akd-barva-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #f0ebe0;
+}
+
+.akd-barva-item:last-child {
+  border-bottom: none;
+}
+
+.akd-barva-dot {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-top: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.akd-barva-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.akd-barva-nazev {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.akd-barva-podtitul {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #C9A84C;
+  font-weight: 500;
+}
+
+.akd-barva-text p {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+  color: #4a4a4a;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* ---- Responzivita ---- */
+@media (max-width: 768px) {
+  .akd-barvy-layout {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .akd-barvy-foto {
+    flex: none;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    position: static;
+  }
+
+  .akd-pastelky-img {
+    
+  }
+}
+</style>
+
+
+  <!-- TÉMATA -->
+  <div class="zb-sec-warm">
+    <div class="zb-label">Oblasti diagnostiky</div>
+    <h2 class="zb-h2">Co lze pomocí AKD diagnostikovat?</h2>
+    <p class="zb-p">Prakticky cokoliv, co právě vstupuje do tvého života.</p>
+    <div class="zb-topics">
+      <div class="zb-topic"><div class="zb-topic-dot"></div>Vztahy</div>
+      <div class="zb-topic"><div class="zb-topic-dot"></div>Peníze & prosperita</div>
+      <div class="zb-topic"><div class="zb-topic-dot"></div>Práce & podnikání</div>
+      <div class="zb-topic"><div class="zb-topic-dot"></div>Rodina & děti</div>
+      <div class="zb-topic"><div class="zb-topic-dot"></div>Zdraví & tělo</div>
+      <div class="zb-topic"><div class="zb-topic-dot"></div>Strachy & pochybnosti</div>
+      <div class="zb-topic"><div class="zb-topic-dot"></div>Sny & vize</div>
+      <div class="zb-topic"><div class="zb-topic-dot"></div>Domov & prostředí</div>
+    </div>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- JAK PROBÍHÁ -->
+  <div class="zb-sec">
+    <div class="zb-label">Průběh kurzu</div>
+    <h2 class="zb-h2">Jak kurz probíhá?</h2>
+    <div class="zb-cards3">
+      <div class="zb-card"><div class="zb-card-icon">💻</div><div class="zb-card-title">Online & vlastní tempo</div><div class="zb-card-text">Uzavřená členská sekce — učební moduly krok za krokem. 7 dní nebo celý měsíc.</div></div>
+      <div class="zb-card"><div class="zb-card-icon">📅</div><div class="zb-card-title">Přístup na 2 měsíce</div><div class="zb-card-text">Máš dostatek času projít vše v klidu a vracet se kdykoliv potřebuješ.</div></div>
+      <div class="zb-card"><div class="zb-card-icon">💬</div><div class="zb-card-title">Osobní podpora</div><div class="zb-card-text">WhatsApp skupina + společný Zoom pro úvodní aktivaci kroků s Hankou.</div></div>
+    </div>
+  </div>
+
+  <div class="zb-diamond"><div class="line"></div><div class="gem"></div><div class="line"></div></div>
+
+  <!-- MODULY -->
+  <div class="zb-sec-warm">
+    <div class="zb-label">Obsah kurzu</div>
+    <h2 class="zb-h2">Co kurz obsahuje?</h2>
+    <p class="zb-p" style="margin-bottom:2rem">Krok za krokem od základů metody JIH® až po samostatnou práci se všemi barvami AKD. Každá lekce obsahuje průvodní text a video.</p>
+    <div class="zb-stats">
+      <div class="zb-stat"><div class="zb-stat-n">7+</div><div class="zb-stat-l">modulů</div></div>
+      <div class="zb-stat"><div class="zb-stat-n">40+</div><div class="zb-stat-l">lekcí s videem</div></div>
+      <div class="zb-stat"><div class="zb-stat-n">2 měs.</div><div class="zb-stat-l">přístup</div></div>
+    </div>
+    <div style="margin-top:2rem">
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">0</div><div class="zb-mod-title">Než začneš — úvod do AKD</div><div class="zb-mod-count">8 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Vítej v kurzu</li><li>Pomůcky pro AKD</li><li>Jak kurzem procházet</li><li>Návod k AKD metodě</li><li>Co je nastaveno v kresbě</li><li>Co znamená sunout barvu</li><li>Nové nastavování energie</li><li>Slova autorky</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">0b</div><div class="zb-mod-title">Co potřebuješ vědět před startem</div><div class="zb-mod-count">7 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Než začneš s AKD</li><li>Jak se kresba provádí</li><li>Co je nastaveno v energii</li><li>Jak to funguje v praxi</li><li>Síla víry</li><li>Co znamená sunout barvu</li><li>Pomůcky k AKD / Jak AKD vzniklo</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">1</div><div class="zb-mod-title">1. den kurzu — co je metoda JIH®</div><div class="zb-mod-count">7 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Co je metoda JIH®</li><li>Boží podstata a vědomí</li><li>Neutralita v diagnostice</li><li>Kolektivní vědomí</li><li>Vědomé vnímání a cítění</li><li>Přihlašovací formulář</li><li>Harmonizační obřad</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">2</div><div class="zb-mod-title">2. modul — postup AKD krok za krokem</div><div class="zb-mod-count">7 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Postup AKD krok za krokem</li><li>Jak AKD kresba funguje</li><li>7 základních barev</li><li>Projevy energií v barvách</li><li>Jak diagnostikovat situaci</li><li>Barva černá — diagnostika</li><li>Barva hnědá — čištění</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">3</div><div class="zb-mod-title">3. modul — barva červená</div><div class="zb-mod-count">4 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Energie napojení</li><li>Diagnostika těla a zdraví</li><li>Barva červená — přijetí</li><li>Barva červená — diagnostika</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">4</div><div class="zb-mod-title">4. modul — barva žlutá</div><div class="zb-mod-count">2 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Barva žlutá — přijetí</li><li>Barva žlutá — diagnostika</li></ul><p class="zb-mod-note">Modul se dokončuje</p></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">5</div><div class="zb-mod-title">5. modul — barva modrá</div><div class="zb-mod-count">2 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Barva modrá — přijetí</li><li>Barva modrá — diagnostika</li></ul><p class="zb-mod-note">Modul se dokončuje</p></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">6</div><div class="zb-mod-title">6. modul — barva zelená &amp; oranžová</div><div class="zb-mod-count">4 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Barva zelená — přijetí</li><li>Barva zelená — diagnostika</li><li>Barva oranžová — přijetí</li><li>Barva oranžová — diagnostika</li></ul><p class="zb-mod-note">Modul se dokončuje</p></div></div>
+    </div>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- PODPORA -->
+  <div class="zb-sec">
+    <div class="zb-label">Nejsi na to sama</div>
+    <h2 class="zb-h2">V tomto kurzu na to<br>nebudeš sama</h2>
+    <div class="zb-cards2" style="margin-top:1.5rem">
+      <div class="zb-card"><div class="zb-card-icon">💬</div><div class="zb-card-title">WhatsApp skupina</div><div class="zb-card-text">Sdílení, dotazy i praktická výuka kresby po celou dobu kurzu. Nejsi na nic sama.</div></div>
+      <div class="zb-card"><div class="zb-card-icon">🎥</div><div class="zb-card-title">Společný Zoom</div><div class="zb-card-text">Úvodní aktivace jednotlivých kroků s Hankou osobně na začátku kurzu.</div></div>
+    </div>
+    <p class="zb-p" style="margin-top:2rem;font-style:italic;color:#888">Mým cílem je, aby ses naučila důvěřovat svému vnímání, rozumět své energii a nacházet odpovědi uvnitř sebe.</p>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- PRŮVODKYNĚ -->
+  <div class="zb-sec-warm">
+    <div class="zb-label">Váš průvodní tým</div>
+    <h2 class="zb-h2">Kdo vás kurzem provede?</h2>
+    <div class="zb-guides">
+      <div class="zb-guide-card">
+        <div class="zb-guide-name">Hanka Mokrá</div>
+        <div class="zb-guide-role">Průvodkyně kurzem · spolutvůrkyně metody JIH®</div>
+        <div class="zb-guide-text">Vystudovala biochemii a výživu na VUT v Brně, působila v Akademii věd ČR. Vedle vědeckého zázemí prošla hlubokým studiem kraniosakrální biodynamiky.<br><br>Automatickou kresbu diagnostickou předává od samého vzniku metody — stovkám lidí pod svým vedením.</div>
+      </div>
+      <div class="zb-guide-card">
+        <div class="zb-guide-name">Jarka Matušková</div>
+        <div class="zb-guide-role">Autorka metody JIH® · průvodkyně vědomým životem</div>
+        <div class="zb-guide-text">Autorka metody JIH® a zakladatelka automatické kresby diagnostické (od roku 2011). Více než 10 let pomáhá lidem pracovat s jejich energií a vnitřním nastavením.<br><br>Věří, že každý člověk má v sobě vše, co potřebuje.</div>
+        <div class="zb-guide-link"><a href="https://www.jarkamatuskova.cz/" target="_blank">Web Jarky Matuškové →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- PRO KOHO -->
+  <div class="zb-sec">
+    <div class="zb-label">Pro koho</div>
+    <h2 class="zb-h2">Pro koho je kurz určen?</h2>
+    <ul class="zb-list">
+      <li>Chceš lépe porozumět sobě a svým reakcím</li>
+      <li>Hledáš souvislosti ve svém životě</li>
+      <li>Chceš pracovat se svými emocemi vědoměji</li>
+      <li>Chceš získat nástroj pro každodenní život</li>
+      <li>Toužíš po větší lehkosti, svobodě a vnitřním klidu</li>
+    </ul>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- CTA -->
+  <div class="zb-cta" id="zb-cta">
+    <div class="zb-label" style="text-align:center">Investice do sebe</div>
+    <div class="zb-price">6 790 Kč</div>
+    <div class="zb-price-sub">vč. DPH</div>
+    <a href="FLIXY_ODKAZ_SEM" class="zb-cta-btn">Chci se zapsat do kurzu</a>
+    <p class="zb-guarantee">✓ Přístup získáš ihned po zaplacení &nbsp;·&nbsp; ✓ Přístup na 2 měsíce</p>
+  </div>
+
+  <!-- ZÁVĚR -->
+  <div class="zb-closing">
+    <div class="zb-closing-text">
+      Automatická kresba diagnostická není jen kurz.<br>
+      Je to cesta k většímu porozumění sobě. Cesta k vlastní síle.<br>
+      Cesta k tomu, aby ses naučila být sama sobě tím nejlepším průvodcem.
+    </div>
+  </div>
+
+</div>
+
+<script>
+function zbToggle(header) {
+  var body = header.nextElementSibling;
+  var arrow = header.querySelector('.zb-mod-arrow');
+  var isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  arrow.style.transform = isOpen ? '' : 'rotate(90deg)';
+}
+</script>
+
+{{ end }}

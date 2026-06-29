@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range .Pages }}
+  <div class="service-card" style="margin-bottom:2rem">
+    <h3><a href="{{ .Permalink }}" style="color:var(--green);text-decoration:none">{{ .Title }}</a></h3>
+    <p>{{ .Summary }}</p>
+  </div>
+  {{ end }}
+</section>
+{{ end }}
