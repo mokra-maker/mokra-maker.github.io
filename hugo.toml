@@ -1,4 +1,42 @@
 baseURL = 'https://hankamokra.cz/'
 languageCode = 'cs'
-title = 'Hanka Mokrá'
-theme = "hanka"
+title = 'Hanka Mokrá | Garant metody JIH®'
+theme = 'hanka'
+
+[params]
+  description = 'Garant metody JIH® s 15letou zkušeností. Osobní vedení, konzultace a kurzy pro ženy 45–55 let, které už nechtějí čekat.'
+
+[[menu.main]]
+  name = 'O mně'
+  url = '/o-mne/'
+  weight = 10
+
+[[menu.main]]
+  name = 'Metoda JIH'
+  url = '/metoda-jih/'
+  weight = 20
+
+[[menu.main]]
+  name = 'Konzultace'
+  url = '/konzultace/'
+  weight = 30
+
+[[menu.main]]
+  name = 'Osobní vedení'
+  url = '/osobni-vedeni/'
+  weight = 40
+
+[[menu.main]]
+  name = 'Blog'
+  url = '/blog/'
+  weight = 50
+
+[[menu.main]]
+  name = 'Spolupráce'
+  url = '/spoluprace/'
+  weight = 60
+
+[[menu.main]]
+  name = 'Kontakt'
+  url = '/kontakt/'
+  weight = 70

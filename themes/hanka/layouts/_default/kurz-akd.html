@@ -8,12 +8,12 @@
 .zb-card-body { padding:1.25rem 1.25rem 1.5rem; }
 /* HERO */
 .zb-hero {
-  position: relative; width: 100%; min-height: 560px; overflow: hidden;
+  position: relative; width: 100%; min-height: 700px; overflow: hidden;
 }
 .zb-hero-bg {
   position: absolute; inset: 0;
   background-image: url('/images/hero-akd.jpg');
-  background-size: cover; background-position: center top; z-index: 0;
+  background-size: cover; background-position: right center; z-index: 0;
 }
 .zb-hero-overlay {
   position: absolute; inset: 0;
@@ -23,7 +23,7 @@
 .zb-hero-text {
   position: relative; z-index: 2;
   padding: 3.5rem 3rem 3.5rem 2.5rem;
-  max-width: 52%; min-height: 560px;
+  max-width: 52%; min-height: 700px;
   display: flex; flex-direction: column; justify-content: center;
 }
 .zb-badge {
@@ -44,7 +44,7 @@
 }
 .zb-hero-sub {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 20px; font-style: italic; color: #C9A84C; line-height: 1.4; margin: 1rem 0 1.25rem;
+  font-size: 26px; font-weight: 600; font-style: italic; color: #C9A84C; line-height: 1.35; margin: 1rem 0 1.25rem;
 }
 .zb-hero-p { font-size: 15px; color: #5A5A5A; line-height: 1.85; margin-bottom: 2rem; }
 
@@ -74,6 +74,9 @@
 .zb-label { font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A84C; margin-bottom: 0.75rem; font-family: 'Montserrat', sans-serif; }
 .zb-h2 { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600; color: #1A1A1A; line-height: 1.2; margin-bottom: 1.25rem; }
 .zb-p { font-size: 16px; color: #5A5A5A; line-height: 1.85; font-family: 'Montserrat', sans-serif; }
+.zb li, .zb ul, .zb ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5A5A; line-height: 1.85; }
+.zb-list li { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5A5A; line-height: 1.85; }
+li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5A5A; line-height: 1.85; }
 
 /* ZAOBLENÉ KARTIČKY */
 .zb-cards2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2rem; }
@@ -91,8 +94,8 @@
   border-radius: 12px; display: flex; align-items: center; justify-content: center;
   font-size: 18px; margin-bottom: 1rem; color: #8B6A1A;
 }
-.zb-card-title { font-size: 15px; font-weight: 700; color: #1A1A1A; margin-bottom: 0.6rem; }
-.zb-card-text { font-size: 15px; color: #5A5A5A; line-height: 1.7; }
+.zb-card-title { font-size: 15px; font-weight: 700; color: #1A1A1A; margin-bottom: 0.6rem; font-family: 'Montserrat', sans-serif; }
+.zb-card-text { font-size: 15px; color: #5A5A5A; line-height: 1.7; font-family: 'Montserrat', sans-serif; }
 
 /* CITÁT — LOSOSOVÝ */
 .zb-quote-block {
@@ -124,13 +127,14 @@
 }
 .zb-stat-n { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: #C9A84C; }
 .zb-stat-l { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-top: 4px; }
+.zb-stat-sub { font-family: 'Montserrat', sans-serif; font-size: 13px; color: #7a7a7a; margin-top: 8px; line-height: 1.5; }
 
 /* TÉMATA */
 .zb-topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px,1fr)); gap: 1rem; margin-top: 2rem; }
 .zb-topic {
   background: #fff; border: 1.5px solid #D4C4A0; border-radius: 14px;
   padding: 1.1rem 1rem; text-align: center;
-  font-size: 14px; font-weight: 600; color: #2A2A2A;
+  font-size: 14px; font-weight: 600; color: #2A2A2A; font-family: 'Montserrat', sans-serif;
   box-shadow: 0 2px 8px rgba(201,168,76,0.08);
 }
 .zb-topic-dot { width: 8px; height: 8px; background: #C9A84C; border-radius: 50%; margin: 0 auto 0.6rem; }
@@ -145,8 +149,8 @@
   display: flex; align-items: center; justify-content: center;
   font-size: 12px; font-weight: 700; color: #8B6A1A; flex-shrink: 0;
 }
-.zb-mod-title { font-size: 14px; font-weight: 600; color: #1A1A1A; flex: 1; transition: color 0.2s; }
-.zb-mod-count { font-size: 12px; color: #888; flex-shrink: 0; }
+.zb-mod-title { font-size: 14px; font-weight: 600; color: #1A1A1A; flex: 1; transition: color 0.2s; font-family: 'Montserrat', sans-serif; }
+.zb-mod-count { font-size: 12px; color: #888; flex-shrink: 0; font-family: 'Montserrat', sans-serif; }
 .zb-mod-arrow { font-size: 18px; color: #C9A84C; transition: transform 0.2s; flex-shrink: 0; }
 .zb-mod-body { display: none; padding: 0 0 1.25rem 3rem; }
 .zb-mod-body.open { display: block; }
@@ -154,7 +158,7 @@
 .zb-lessons li { padding: 0.4rem 0; font-size: 13px; color: #5A5A5A; border-bottom: 0.5px solid #F5F5F5; display: flex; gap: 0.75rem; }
 .zb-lessons li:last-child { border-bottom: none; }
 .zb-lessons li::before { content: "›"; color: #C9A84C; font-weight: 700; }
-.zb-mod-note { font-size: 12px; color: #C9A84C; margin-top: 0.5rem; font-style: italic; }
+.zb-mod-note { font-size: 12px; color: #C9A84C; margin-top: 0.5rem; font-style: italic; font-family: 'Montserrat', sans-serif; }
 
 /* PRŮVODKYNĚ */
 .zb-guides { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
@@ -165,7 +169,7 @@
 }
 .zb-guide-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: #1A1A1A; margin-bottom: 4px; }
 .zb-guide-role { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #C9A84C; margin-bottom: 1rem; }
-.zb-guide-text { font-size: 13px; color: #5A5A5A; line-height: 1.8; }
+.zb-guide-text { font-size: 15px; color: #5A5A5A; line-height: 1.85; font-family: 'Montserrat', sans-serif; }
 .zb-guide-link { margin-top: 1rem; font-size: 13px; }
 .zb-guide-link a { color: #C9A84C; text-decoration: none; font-weight: 600; }
 
@@ -206,11 +210,17 @@
     <div class="zb-hero-bg"></div>
     <div class="zb-hero-overlay"></div>
     <div class="zb-hero-text">
-      <div class="zb-badge">Online kurz — metoda JIH®</div>
+      <div class="zb-badge">Online kurz • metoda JIH®</div>
       <h1 class="zb-hero-h1">Automatická kresba diagnostická metodou JIH®</h1>
-      <p class="zb-hero-sub">Nauč se rozumět sobě, svým pocitům i souvislostem svého života</p>
-      <p class="zb-hero-p">Co kdyby existoval jednoduchý nástroj, díky kterému bys dokázala porozumět tomu, co se právě děje ve tvém životě?</p>
-      <a href="#zb-cta" class="zb-btn">Chci se zapsat →</a>
+      <p class="zb-hero-sub">Objev cestu, díky které porozumíš sobě, svým pocitům i souvislostem svého života.</p>
+      <p class="zb-hero-p" style="margin-bottom:0.5rem"><strong>Možná už dlouho hledáš odpovědi.</strong></p>
+      <ul class="zb-list" style="margin-top:0;margin-bottom:2rem">
+        <li>Proč se některé situace stále opakují.</li>
+        <li>Proč se někdy cítíš unavená, zahlcená nebo ztracená.</li>
+        <li>Proč víš, že chceš změnu, ale nevíš, kde začít.</li>
+      </ul>
+      <p class="zb-hero-p"><strong>A co když odpovědi nemusíš hledat stále venku?</strong><br>Možná jsou odpovědi už dávno v tobě. Jen ses je ještě nenaučila číst.<br>Automatická kresba diagnostická metodou JIH® je jemná cesta, která tě naučí lépe vnímat sama sebe, porozumět tomu, co se právě odehrává ve tvém životě, a znovu důvěřovat vlastnímu vnímání.</p>
+      <a href="#zb-cta" class="zb-btn">Chci začít svou cestu →</a>
     </div>
   </div>
 
@@ -220,27 +230,30 @@
   <div class="zb-sec-warm">
     <div class="zb-label">Poznáváš se?</div>
     <h2 class="zb-h2">Ptáš se stále dokola…</h2>
+    <p style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:#1A1A1A;margin-top:0.5rem;margin-bottom:1.5rem;">Možná si některou z těchto otázek pokládáš i ty...</p>
     <ul class="zb-list">
-      <li>Proč se mi tato situace opakuje?</li>
-      <li>Proč se cítím tak, jak se cítím?</li>
-      <li>Proč mě bolí tělo?</li>
-      <li>Odkud přichází moje strachy, pochybnosti nebo nepohodlí?</li>
-      <li>Jak si mohu pomoci sama?</li>
+      <li>Proč se mi některé situace stále opakují?</li>
+      <li>Proč se cítím tak, jak se cítím, i když se snažím věci změnit?</li>
+      <li>Proč mě tělo upozorňuje bolestí nebo únavou?</li>
+      <li>Odkud přicházejí moje strachy, pochybnosti nebo vnitřní neklid?</li>
+      <li>Jak najít odpovědi, kterým budu opravdu věřit?</li>
+      <li>Jak si mohu pomoci sama, kdykoliv to budu potřebovat?</li>
     </ul>
+    <p class="zb-p" style="margin-top:1.5rem"><strong>Možná nehledáš další radu.</strong><br><strong>Možná hledáš způsob, jak začít rozumět sama sobě.</strong></p>
   </div>
 
   <div class="zb-gold-bar"></div>
 
   <!-- CO JE AKD -->
-  <div class="zb-sec">    <div class="zb-label">Co je AKD</div>
-    <h2 class="zb-h2">Jedinečný diagnostický<br>a terapeutický nástroj</h2>
-    <p class="zb-p">Automatická kresba diagnostická propojuje kresbu, vědomé vnímání a práci s energií metodou JIH®. Pomocí jednoduché kresby a sedmi základních barev se učíš vnímat souvislosti svého života, nacházet zdroje nepohodlí a uvolňovat je.</p>
+  <div class="zb-sec">    <div class="zb-label">Proč právě AKD</div>
+    <h2 class="zb-h2">Existuje cesta, která nezačíná radou.<br>Začíná tebou.</h2>
+    <p class="zb-p">Automatická kresba diagnostická metodou JIH® propojuje jednoduchou kresbu, vědomé vnímání a práci s energií. Díky tomu se učíš porozumět sobě, svým pocitům i souvislostem svého života.</p>
     <p style="font-size:1.15rem;font-weight:600;color:#2C2C2C;margin-top:1.5rem;font-style:italic;">Nepotřebuješ umět kreslit. Nepotřebuješ žádné předchozí zkušenosti.</p>
     <div class="zb-cards3">
-        <div class="zb-card-img"><img src="/images/AKD_1.jpg" alt="Kresba" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Kresba</div><div class="zb-card-text">Jednoduchý nástroj dostupný kdykoliv a kdekoliv</div></div></div>
-        <div class="zb-card-img"><img src="/images/Energie_AKD.jpg" alt="Vědomé vnímání" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Vědomé vnímání</div><div class="zb-card-text">Aktivace hlubšího vnímání sebe a svého života</div></div></div>
-        <div class="zb-card-img"><img src="/images/Vědomí_AKD.jpg" alt="Energie JIH®" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Energie JIH®</div><div class="zb-card-text">Práce s energií na úrovni vědomí a vnímání skrze tělo.</div></div></div>
-        <div class="zb-card-img"><img src="/images/Změna_AKD.jpg" alt="Osobní změna" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Osobní změna</div><div class="zb-card-text">Reálná transformace v každodenním životě</div></div></div>
+        <div class="zb-card-img"><img src="/images/AKD_1.jpg" alt="Kresba" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Kresba jako jazyk tvého nitra</div><div class="zb-card-text">Jednoduchý způsob, jak porozumět tomu, co se odehrává uvnitř tebe.</div></div></div>
+        <div class="zb-card-img"><img src="/images/Energie_AKD.jpg" alt="Vědomé vnímání" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Důvěra ve vlastní vnímání</div><div class="zb-card-text">Postupně se naučíš více důvěřovat sama sobě a svým pocitům.</div></div></div>
+        <div class="zb-card-img"><img src="/images/Vědomí_AKD.jpg" alt="Energie JIH®" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Porozumění souvislostem</div><div class="zb-card-text">Začneš vidět příčiny toho, co prožíváš, a lépe chápat svůj život.</div></div></div>
+        <div class="zb-card-img"><img src="/images/Změna_AKD.jpg" alt="Osobní změna" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Proměna v každodenním životě</div><div class="zb-card-text">Skutečná změna se začne postupně promítat do tvého každodenního života.</div></div></div>
     </div>
     </div>
   </div>
@@ -250,20 +263,24 @@
   <!-- CO SE NAUČÍŠ -->
   <div class="zb-sec-warm">
     <div class="zb-label">Výsledky kurzu</div>
-    <h2 class="zb-h2">Co se v kurzu naučíš?</h2>
+    <h2 class="zb-h2">Co si z této cesty odneseš?</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 2rem">
       <ul class="zb-list">
-        <li>Pracovat se sedmi barvami AKD</li>
-        <li>Diagnostikovat pocity a životní situace</li>
-        <li>Aktivovat vědomé vnímání a cítění</li>
-        <li>Rozpoznávat zdroje nepohodlí</li>
+        <li>Naučíš se rozumět tomu, co ti tvůj život ukazuje.</li>
+        <li>Získáš jednoduchý nástroj, který můžeš používat kdykoliv ho budeš potřebovat.</li>
+        <li>Začneš více důvěřovat sobě, svému vnímání i intuici.</li>
+        <li>Lépe porozumíš svým emocím i příčinám životních situací.</li>
       </ul>
       <ul class="zb-list">
-        <li>Čistit stará omezení metodou JIH®</li>
-        <li>Nastavovat novou energii do prosperity</li>
-        <li>Pracovat s kolektivním vědomím a egem</li>
-        <li>Pracovat sama se sebou každý den</li>
+        <li>Naučíš se uvolňovat staré zátěže a omezující vzorce.</li>
+        <li>Objevíš, jak vědomě pracovat se svou energií.</li>
+        <li>Získáš větší klid, jistotu a důvěru sama v sebe.</li>
+        <li>Vytvoříš si vlastní cestu pravidelné práce se sebou.</li>
       </ul>
+    </div>
+    <div style="margin-top:2rem;background:#FFFFFF;border:1.5px solid #C9A84C;border-radius:16px;padding:1.75rem 2rem;text-align:center;box-shadow:0 4px 14px rgba(201,168,76,0.1);">
+      <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#C9A84C;margin-bottom:0.9rem;"></span>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#3A2018;line-height:1.5;margin:0;">To nejdůležitější, co si z kurzu odneseš, není kresba.<br>Je to důvěra v sebe.</p>
     </div>
   </div>
 
@@ -272,15 +289,39 @@
   <!-- PŘÍNOSY — zaoblené kartičky -->
   <div class="zb-sec">
     <div class="zb-label">Přínosy</div>
-    <h2 class="zb-h2">Co ti kurz přinese?</h2>
-    <div class="zb-cards2">
-      <div class="zb-card"><div class="zb-card-icon">✿</div><div class="zb-card-title">Úleva & svoboda</div><div class="zb-card-text">Úleva od starých příběhů a nový pohled na životní situace</div></div>
-      <div class="zb-card"><div class="zb-card-icon">◇</div><div class="zb-card-title">Nový pohled</div><div class="zb-card-text">Jiný, svobodnější pohled na životní situace kolem tebe</div></div>
-      <div class="zb-card"><div class="zb-card-icon">∞</div><div class="zb-card-title">Samostatnost</div><div class="zb-card-text">Možnost pracovat sama se sebou kdykoliv potřebuješ</div></div>
+    <h2 class="zb-h2">Co se začne měnit?</h2>
+    <div class="zb-cards2" style="grid-template-columns:repeat(3,1fr)">
+      <div class="zb-card"><div class="zb-card-icon">☾</div><div class="zb-card-title">Klid místo neustálého hledání</div><div class="zb-card-text">Přestaneš mít pocit, že odpovědi musíš hledat všude kolem sebe. Začneš je nacházet uvnitř sebe.</div></div>
+      <div class="zb-card"><div class="zb-card-icon">◇</div><div class="zb-card-title">Důvěra ve vlastní vnímání</div><div class="zb-card-text">Postupně přestaneš pochybovat o tom, co cítíš. Začneš více důvěřovat svému vnímání.</div></div>
+      <div class="zb-card"><div class="zb-card-icon">✿</div><div class="zb-card-title">Větší svoboda v každodenním životě</div><div class="zb-card-text">To, co objevíš během kurzu, začne přirozeně měnit tvá rozhodnutí, vztahy i každodenní prožívání.</div></div>
     </div>
   </div>
 
   <div class="zb-gold-bar"></div>
+
+  <!-- PRŮVODKYNĚ -->
+  <div class="zb-sec-warm">
+    <div class="zb-label">Kdo tě touto cestou provede</div>
+    <h2 class="zb-h2">Touto cestou tě provedu osobně.</h2>
+
+    <div style="display:grid;grid-template-columns:380px 1fr;gap:0;align-items:stretch;margin-bottom:2.5rem;background:#fff;border-radius:20px;border:1px solid #EDE8DF;overflow:hidden;">
+      <div style="min-height:340px;overflow:hidden;">
+        <img src="/images/hanka-pruvodkyne.png" style="width:100%;height:100%;object-fit:cover;object-position:center 10%;display:block;">
+      </div>
+      <div style="padding:2.5rem 2rem;">
+        <div style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;border:1px solid #C9A84C;border-radius:20px;padding:3px 14px;margin-bottom:0.75rem;font-family:Montserrat,sans-serif;">Průvodkyně kurzem</div>
+        <div style="font-family:Cormorant Garamond,serif;font-size:28px;font-weight:600;margin-bottom:0.5rem;color:#1A1A1A;">Hanka Mokrá</div>
+        <div style="height:2px;background:#C9A84C;width:48px;margin-bottom:1.25rem;"></div>
+        <p style="font-size:15px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1rem;"><strong>Nezačínala jsem jako někdo, kdo měl všechny odpovědi.</strong></p>
+        <p style="font-size:15px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1rem;">Stejně jako mnoho žen jsem hledala způsob, jak porozumět sobě, svým pocitům i tomu, proč se některé životní situace stále opakují.</p>
+        <p style="font-size:15px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1rem;">Právě toto hledání mě přivedlo k metodě JIH®, u jejíhož zrodu jsem měla možnost být a podílet se na jejím postupném utváření. Měla jsem také to štěstí stát u zrodu Automatické kresby diagnostické metodou JIH®, kterou vytvořila moje kolegyně a dlouholetá přítelkyně Jarka Matušková. Od samého začátku jsem mohla být součástí jejího rozvoje, učit se ji do hloubky poznávat a využívat ji nejen ve své terapeutické praxi, ale i ve svém osobním životě.</p>
+        <p style="font-size:15px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1.5rem;">Dnes mám tu čest předávat tuto metodu dál ženám, které chtějí lépe porozumět samy sobě, důvěřovat svému vnímání a stát se vědomými tvůrkyněmi vlastního života.</p>
+        <div style="border-left:3px solid #C9A84C;padding-left:1rem;font-size:15px;font-style:italic;color:#5A5A5A;font-family:Montserrat,sans-serif;line-height:1.85;">A právě proto vznikl i tento online kurz.<br><strong>Ne proto, aby ti říkal, co máš dělat.</strong><br><strong>Ale proto, aby tě krok za krokem naučil nacházet vlastní odpovědi.</strong></div>
+      </div>
+    </div>
+
+  </div>
+
 
   <!-- CITÁT — LOSOSOVÝ -->
   <div class="zb-sec" style="padding-top:3rem;padding-bottom:3rem">
@@ -581,36 +622,247 @@
   <!-- JAK PROBÍHÁ -->
   <div class="zb-sec">
     <div class="zb-label">Průběh kurzu</div>
-    <h2 class="zb-h2">Jak kurz probíhá?</h2>
+    <h2 class="zb-h2">Jak bude probíhat tvoje cesta?</h2>
+
+    <p class="zb-p">Celý kurz je vytvořený tak, aby tě krok za krokem naučil pracovat s Automatickou kresbou diagnostickou metodou JIH®.</p>
+    <p class="zb-p">Nezáleží na tom, jestli se s metodou setkáváš poprvé, nebo už máš s metodou JIH® zkušenosti. Kurz vznikl na základě mnohaleté praxe, vedení kurzů AKD i zkušeností z individuální terapeutické práce. Každý modul, každá lekce i každé video byly vytvořeny tak, aby ti postupně a srozumitelně předaly vše potřebné.</p>
+    <p class="zb-p">Nebudeš přeskakovat mezi informacemi ani tápat, co dělat dál. Krok za krokem tě provedu celou metodou &ndash; od úplných základů až po samostatnou práci s Automatickou kresbou diagnostickou ve tvém každodenním životě.</p>
+    <p class="zb-p">Každý modul obsahuje krátké videolekce, průvodní texty, praktické ukázky i názorná videa. Vše je uspořádané tak, aby ses mohla učit vlastním tempem a nové dovednosti postupně převádět do svého každodenního života.</p>
+
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#1A1A1A;margin-top:2.5rem;margin-bottom:1.5rem;">Tvá cesta kurzem bude probíhat ve třech navazujících etapách.</h3>
+
     <div class="zb-cards3">
-      <div class="zb-card"><div class="zb-card-icon">💻</div><div class="zb-card-title">Online & vlastní tempo</div><div class="zb-card-text">Uzavřená členská sekce — učební moduly krok za krokem. 7 dní nebo celý měsíc.</div></div>
-      <div class="zb-card"><div class="zb-card-icon">📅</div><div class="zb-card-title">Přístup na 2 měsíce</div><div class="zb-card-text">Máš dostatek času projít vše v klidu a vracet se kdykoliv potřebuješ.</div></div>
-      <div class="zb-card"><div class="zb-card-icon">💬</div><div class="zb-card-title">Osobní podpora</div><div class="zb-card-text">WhatsApp skupina + společný Zoom pro úvodní aktivaci kroků s Hankou.</div></div>
+      <div class="zb-card">
+        <div class="zb-card-icon">🌿</div>
+        <div style="font-size:12px;font-weight:700;color:#C9A84C;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;font-family:Montserrat,sans-serif;">1. měsíc</div>
+        <div class="zb-card-title">Porozumíš principům metody JIH®</div>
+        <div class="zb-card-text">Porozumíš základům metody JIH®, naučíš se vnímat své tělo, aktivuješ vlastní vnímání a pochopíš souvislosti, na kterých je Automatická kresba diagnostická postavená.</div>
+      </div>
+      <div class="zb-card">
+        <div class="zb-card-icon">🎨</div>
+        <div style="font-size:12px;font-weight:700;color:#C9A84C;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;font-family:Montserrat,sans-serif;">2. měsíc</div>
+        <div class="zb-card-title">Naučíš se pracovat s AKD</div>
+        <div class="zb-card-text">Postupně projdeme všechny barvy, diagnostiku i práci s jednotlivými principy tak, aby ses naučila s kresbou pracovat samostatně a s jistotou.</div>
+      </div>
+      <div class="zb-card">
+        <div class="zb-card-icon">✨</div>
+        <div style="font-size:12px;font-weight:700;color:#C9A84C;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;font-family:Montserrat,sans-serif;">3. měsíc</div>
+        <div class="zb-card-title">Začneš využívat AKD ve svém životě</div>
+        <div class="zb-card-text">Začneš využívat Automatickou kresbu diagnostickou při řešení vlastních životních situací, vztahů, emocí i každodenních témat. To, co se během kurzu naučíš, začneš přirozeně přenášet do svého života.</div>
+      </div>
     </div>
   </div>
+
+  <!-- PŘEDĚLOVNÍK — VÝBĚR PODPORY -->
+  <div style="width:100vw;position:relative;left:50%;transform:translateX(-50%);background:#F5D5C8;">
+    <div style="height:3px;background:linear-gradient(to right, transparent, #C9A84C, #E8D07A, #C9A84C, transparent);"></div>
+    <div style="padding:3.5rem 2rem;text-align:center;">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#1A1A1A;margin:0 0 0.85rem;">Vyber si způsob podpory, který ti bude nejlépe vyhovovat</h2>
+      <p style="font-family:'Montserrat',sans-serif;font-size:15px;color:#5A4A42;max-width:900px;margin:0 auto;line-height:1.75;white-space:normal;">Obě varianty tě naučí pracovat s Automatickou kresbou diagnostickou metodou JIH®.<br>Rozdíl je pouze v tom, kolik osobní podpory ode mě během tvé cesty budeš chtít využít.</p>
+    </div>
+    <div style="height:3px;background:linear-gradient(to right, transparent, #C9A84C, #E8D07A, #C9A84C, transparent);"></div>
+  </div>
+
+  <!-- NABÍDKOVÉ KARTY — DVĚ VARIANTY -->
+  <div class="zb-sec">
+    <div class="zb-offer-grid">
+
+      <!-- Karta 1: AKD Standard -->
+      <div class="zb-offer-card">
+        <div class="zb-offer-img-wrap">
+          <img src="/images/akd-standard.png" alt="AKD Standard" loading="lazy">
+        </div>
+        <div class="zb-offer-body">
+          <h3 class="zb-offer-title">🌿 AKD Standard</h3>
+          <p class="zb-offer-subtitle">Pro ženy, které chtějí objevovat vlastním tempem.</p>
+          <p class="zb-p">Kurz je postavený tak, aby tě bezpečně provedl celou metodou i bez pravidelného osobního vedení. Mou podporu budeš mít po celou dobu tříměsíčního průchodu kurzem k dispozici vždy, když ji budeš potřebovat.</p>
+          <p class="zb-offer-list-label">Součástí programu je:</p>
+          <ul class="zb-check-list">
+            <li>Kompletní online kurz (7&ndash;10 modulů)</li>
+            <li>Více než 50 praktických videolekcí</li>
+            <li>Průvodní texty ke každému modulu i lekci</li>
+            <li>Pracovní materiály a skripta</li>
+            <li>Moje podpora po dobu celého 3měsíčního průchodu kurzem</li>
+            <li>Přístup ke kurzu na 2 roky</li>
+            <li>Uzavřená WhatsApp skupina</li>
+            <li>Možnost průběžně pokládat otázky</li>
+            <li>Zpětná vazba ke kresbám</li>
+            <li>Dvě společná Zoom setkání
+              <ul class="zb-check-sublist">
+                <li>úvodní uvedení do kurzu</li>
+                <li>společné otázky, diagnostika a práce s barvami</li>
+              </ul>
+            </li>
+            <li>Možnost kdykoliv během kurzu dokoupit individuální konzultaci (dle osobní potřeby)</li>
+          </ul>
+          <div class="zb-offer-hint">
+            <p><strong>🍃 AKD Standard</strong><br>Ideální volba, pokud se ráda učíš vlastním tempem a chceš mít možnost využít mou podporu podle svých potřeb.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 2: AKD s osobním vedením -->
+      <div class="zb-offer-card">
+        <div class="zb-offer-img-wrap">
+          <img src="/images/akd-osobni-vedeni.png" alt="AKD s osobním vedením" loading="lazy">
+        </div>
+        <div class="zb-offer-body">
+          <h3 class="zb-offer-title">🌸 AKD s osobním vedením</h3>
+          <p class="zb-offer-subtitle">Pro ženy, které chtějí mít na své cestě pravidelnou podporu.</p>
+          <p class="zb-p">Tato varianta je určena ženám, které chtějí mít během celého kurzu mou pravidelnou podporu, větší jistotu při diagnostice a prostor konzultovat vše, co se během jejich procesu otevře.</p>
+          <p class="zb-offer-list-label">Obsahuje vše ze Standardu a navíc:</p>
+          <ul class="zb-check-list">
+            <li>Pravidelná týdenní Zoom setkání</li>
+            <li>Společná diagnostika a rozbor kreseb</li>
+            <li>Individuální zpětná vazba</li>
+            <li>Pomoc se správnou diagnostikou</li>
+            <li>Hlubší porozumění práci s barvami</li>
+            <li>Prostor pro osobní otázky</li>
+            <li>Podpora ve chvílích, kdy si nebudeš jistá</li>
+            <li>Jasný rámec spolupráce po celé tři měsíce</li>
+          </ul>
+          <p class="zb-p" style="margin-top:1.25rem;">Díky mým dlouholetým zkušenostem tě mohu provést i jemnějšími souvislostmi metody JIH®, které se často otevírají až během samotné praxe. Společně tak prohloubíme tvé vnímání, získáš větší jistotu při diagnostice a naučíš se využívat Automatickou kresbu diagnostickou metodou JIH® přirozeně ve svém každodenním životě.</p>
+          <div class="zb-offer-hint">
+            <p><strong>🌸 AKD s osobním vedením</strong><br>Ideální volba, pokud chceš pravidelnou zpětnou vazbu, větší jistotu a intenzivnější společnou cestu.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    .zb-offer-hint{
+      margin-top:1.5rem;
+      padding:1rem 1.25rem;
+      background:#FCFAF6;
+      border-left:3px solid #C9A84C;
+      border-radius:8px;
+    }
+    .zb-offer-hint p{
+      font-family:'Montserrat',sans-serif;
+      font-size:14px;
+      color:#5A4A42;
+      line-height:1.7;
+      margin:0;
+    }
+    .zb-offer-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:2rem;
+      align-items:start;
+    }
+    @media (max-width:900px){
+      .zb-offer-grid{ grid-template-columns:1fr; }
+    }
+    .zb-offer-card{
+      background:#fff;
+      border:2px solid #C9A84C;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 4px 18px rgba(26,26,26,0.06);
+    }
+    .zb-offer-img-wrap{
+      width:100%;
+      aspect-ratio:4/3;
+      overflow:hidden;
+    }
+    .zb-offer-img-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .zb-offer-body{
+      padding:2rem 1.75rem 2.25rem;
+    }
+    .zb-offer-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:26px;
+      font-weight:600;
+      color:#1A1A1A;
+      margin:0 0 0.4rem;
+    }
+    .zb-offer-subtitle{
+      font-family:'Montserrat',sans-serif;
+      font-size:14px;
+      font-style:italic;
+      color:#8B6A1A;
+      margin:0 0 1rem;
+    }
+    .zb-offer-list-label{
+      font-family:'Montserrat',sans-serif;
+      font-weight:700;
+      font-size:14px;
+      color:#1A1A1A;
+      margin:1.5rem 0 0.75rem;
+    }
+    .zb-check-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    .zb-check-list > li{
+      position:relative;
+      padding:0.4rem 0 0.4rem 1.6rem;
+      font-family:'Montserrat',sans-serif;
+      font-size:14.5px;
+      color:#3a3a3a;
+      line-height:1.6;
+    }
+    .zb-check-list > li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0.4rem;
+      color:#C9A84C;
+      font-weight:700;
+    }
+    .zb-check-sublist{
+      list-style:none;
+      margin:0.35rem 0 0.25rem;
+      padding:0;
+    }
+    .zb-check-sublist li{
+      position:relative;
+      padding:0.15rem 0 0.15rem 1.1rem;
+      font-size:13.5px;
+      color:#6a6a6a;
+      line-height:1.55;
+    }
+    .zb-check-sublist li::before{
+      content:"–";
+      position:absolute;
+      left:0;
+      color:#C9A84C;
+    }
+  </style>
 
   <div class="zb-diamond"><div class="line"></div><div class="gem"></div><div class="line"></div></div>
 
   <!-- MODULY -->
   <div class="zb-sec-warm">
-    <div class="zb-label">Obsah kurzu</div>
-    <h2 class="zb-h2">Co kurz obsahuje?</h2>
-    <p class="zb-p" style="margin-bottom:2rem">Krok za krokem od základů metody JIH® až po samostatnou práci se všemi barvami AKD. Každá lekce obsahuje průvodní text a video.</p>
+    <div class="zb-label">Podívej se dovnitř kurzu</div>
+    <h2 class="zb-h2">Co tě v kurzu čeká?</h2>
+    <p class="zb-p" style="margin-bottom:2rem">Celý kurz je vytvořený tak, aby tě krok za krokem provedl metodou JIH® bez zbytečného zahlcení informacemi. Každý modul navazuje na ten předchozí a přirozeně tě dovede od pochopení principů až k samostatné práci s Automatickou kresbou diagnostickou metodou JIH®. Součástí každé lekce je video i průvodní text, ke kterému se můžeš kdykoliv vrátit.</p>
     <div class="zb-stats">
-      <div class="zb-stat"><div class="zb-stat-n">7+</div><div class="zb-stat-l">modulů</div></div>
-      <div class="zb-stat"><div class="zb-stat-n">40+</div><div class="zb-stat-l">lekcí s videem</div></div>
-      <div class="zb-stat"><div class="zb-stat-n">2 měs.</div><div class="zb-stat-l">přístup</div></div>
+      <div class="zb-stat"><div class="zb-stat-n">7+</div><div class="zb-stat-l">modulů</div><div class="zb-stat-sub">Od prvních principů až po samostatnou práci.</div></div>
+      <div class="zb-stat"><div class="zb-stat-n">50+</div><div class="zb-stat-l">videolekcí</div><div class="zb-stat-sub">Praktické ukázky, návody i diagnostika.</div></div>
+      <div class="zb-stat"><div class="zb-stat-n">2 roky</div><div class="zb-stat-l">přístup</div><div class="zb-stat-sub">Vracíš se kdykoliv budeš potřebovat.</div></div>
     </div>
     <div style="margin-top:2rem">
-      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">0</div><div class="zb-mod-title">Než začneš — úvod do AKD</div><div class="zb-mod-count">8 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Vítej v kurzu</li><li>Pomůcky pro AKD</li><li>Jak kurzem procházet</li><li>Návod k AKD metodě</li><li>Co je nastaveno v kresbě</li><li>Co znamená sunout barvu</li><li>Nové nastavování energie</li><li>Slova autorky</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">0</div><div class="zb-mod-title">Než začneš — úvod do AKD</div><div class="zb-mod-count">8 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Vítej v kurzu</li><li>Pomůcky pro AKD</li><li>Jak kurzem projít krok za krokem</li><li>Návod k AKD metodou JIH v bodech</li><li>Jak je terapie AKD nastavena metodou JIH</li><li>Co znamená sundavám a ruším v metodě JIH</li><li>Nové nastavování při terapii AKD</li><li>Slova autorky metody JIH &ndash; Jarky Matuškové</li></ul></div></div>
       <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">0b</div><div class="zb-mod-title">Co potřebuješ vědět před startem</div><div class="zb-mod-count">7 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Než začneš s AKD</li><li>Jak se kresba provádí</li><li>Co je nastaveno v energii</li><li>Jak to funguje v praxi</li><li>Síla víry</li><li>Co znamená sunout barvu</li><li>Pomůcky k AKD / Jak AKD vzniklo</li></ul></div></div>
-      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">1</div><div class="zb-mod-title">1. den kurzu — co je metoda JIH®</div><div class="zb-mod-count">7 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Co je metoda JIH®</li><li>Boží podstata a vědomí</li><li>Neutralita v diagnostice</li><li>Kolektivní vědomí</li><li>Vědomé vnímání a cítění</li><li>Přihlašovací formulář</li><li>Harmonizační obřad</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">1</div><div class="zb-mod-title">1. den kurzu — co je metoda JIH®</div><div class="zb-mod-count">7 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Co je metoda JIH®</li><li>Boží podstata a vědomí</li><li>Neutralita v diagnostice</li><li>Kolektivní vědomí</li><li>Vědomé vnímání a cítění</li><li>Přihlašovací formulář</li><li>Harmonizační obraz</li></ul></div></div>
       <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">2</div><div class="zb-mod-title">2. modul — postup AKD krok za krokem</div><div class="zb-mod-count">7 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Postup AKD krok za krokem</li><li>Jak AKD kresba funguje</li><li>7 základních barev</li><li>Projevy energií v barvách</li><li>Jak diagnostikovat situaci</li><li>Barva černá — diagnostika</li><li>Barva hnědá — čištění</li></ul></div></div>
       <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">3</div><div class="zb-mod-title">3. modul — barva červená</div><div class="zb-mod-count">4 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Energie napojení</li><li>Diagnostika těla a zdraví</li><li>Barva červená — přijetí</li><li>Barva červená — diagnostika</li></ul></div></div>
-      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">4</div><div class="zb-mod-title">4. modul — barva žlutá</div><div class="zb-mod-count">2 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Barva žlutá — přijetí</li><li>Barva žlutá — diagnostika</li></ul><p class="zb-mod-note">Modul se dokončuje</p></div></div>
-      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">5</div><div class="zb-mod-title">5. modul — barva modrá</div><div class="zb-mod-count">2 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Barva modrá — přijetí</li><li>Barva modrá — diagnostika</li></ul><p class="zb-mod-note">Modul se dokončuje</p></div></div>
-      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">6</div><div class="zb-mod-title">6. modul — barva zelená &amp; oranžová</div><div class="zb-mod-count">4 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Barva zelená — přijetí</li><li>Barva zelená — diagnostika</li><li>Barva oranžová — přijetí</li><li>Barva oranžová — diagnostika</li></ul><p class="zb-mod-note">Modul se dokončuje</p></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">4</div><div class="zb-mod-title">4. modul — barva žlutá</div><div class="zb-mod-count">2 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Barva žlutá — přijetí</li><li>Barva žlutá — diagnostika</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">5</div><div class="zb-mod-title">5. modul — barva modrá</div><div class="zb-mod-count">2 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Barva modrá — přijetí</li><li>Barva modrá — diagnostika</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">6</div><div class="zb-mod-title">6. modul — barva zelená &amp; oranžová</div><div class="zb-mod-count">4 lekce</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Barva zelená — přijetí</li><li>Barva zelená — diagnostika</li><li>Barva oranžová — přijetí</li><li>Barva oranžová — diagnostika</li></ul></div></div>
+      <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">7</div><div class="zb-mod-title">7. modul — diagnostika v praxi</div><div class="zb-mod-count">5 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Diagnostika všemi barvami najednou</li><li>Témata pro diagnostiku a jak na to</li><li>Co, kdy mohu diagnostikovat</li><li>Kdy a jak pomáhat druhým</li><li>Co dělat, když si nejsem jistá</li></ul></div></div>
     </div>
+    <p class="zb-p" style="text-align:center;margin-top:2rem;">Každý modul obsahuje krátké videolekce, praktické ukázky i jednoduché úkoly, díky kterým nové poznatky rovnou převádíš do svého života.</p>
+    <p style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:#1A1A1A;text-align:center;margin-top:1rem;">Kurz průběžně rozšiřuji a aktualizuji o nové poznatky i zkušenosti z praxe.</p>
   </div>
 
   <div class="zb-gold-bar"></div>
@@ -628,26 +880,25 @@
 
   <div class="zb-gold-bar"></div>
 
-  <!-- PRŮVODKYNĚ -->
-  <div class="zb-sec-warm">
-    <div class="zb-label">Váš průvodní tým</div>
-    <h2 class="zb-h2">Kdo vás kurzem provede?</h2>
-    <div class="zb-guides">
-      <div class="zb-guide-card">
-        <div class="zb-guide-name">Hanka Mokrá</div>
-        <div class="zb-guide-role">Průvodkyně kurzem · spolutvůrkyně metody JIH®</div>
-        <div class="zb-guide-text">Vystudovala biochemii a výživu na VUT v Brně, působila v Akademii věd ČR. Vedle vědeckého zázemí prošla hlubokým studiem kraniosakrální biodynamiky.<br><br>Automatickou kresbu diagnostickou předává od samého vzniku metody — stovkám lidí pod svým vedením.</div>
-      </div>
-      <div class="zb-guide-card">
-        <div class="zb-guide-name">Jarka Matušková</div>
-        <div class="zb-guide-role">Autorka metody JIH® · průvodkyně vědomým životem</div>
-        <div class="zb-guide-text">Autorka metody JIH® a zakladatelka automatické kresby diagnostické (od roku 2011). Více než 10 let pomáhá lidem pracovat s jejich energií a vnitřním nastavením.<br><br>Věří, že každý člověk má v sobě vše, co potřebuje.</div>
-        <div class="zb-guide-link"><a href="https://www.jarkamatuskova.cz/" target="_blank">Web Jarky Matuškové →</a></div>
+  <div class="zb-sec">
+    <div class="zb-label">O autorce metody AKD</div>
+    <h2 class="zb-h2">Kdo stojí za metodou AKD?</h2>
+    <div style="background:#FDFAF5;border:1px solid #EDE8DF;border-radius:20px;padding:2rem;">
+      <div style="display:grid;grid-template-columns:1fr 160px;gap:2rem;align-items:start;">
+        <div>
+          <div style="font-family:Cormorant Garamond,serif;font-size:24px;font-weight:600;margin-bottom:0.25rem;color:#1A1A1A;">Jarka Matušková</div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;margin-bottom:1rem;font-family:Montserrat,sans-serif;">Autorka metody JIH® · Průvodkyně vědomým životem</div>
+          <p style="font-size:14px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1.25rem;">Autorka metody JIH® a zakladatelka automatické kresby diagnostické (od roku 2011). Více než 10 let pomáhá lidem pracovat s jejich energií a vnitřním nastavením.</p>
+          <div style="border-left:3px solid #C9A84C;padding-left:1rem;font-size:14px;font-style:italic;color:#5A5A5A;font-family:Montserrat,sans-serif;line-height:1.85;">Automatická kresba diagnostická pomáhá lidem již od roku 2011. Dala jsem si tu práci předávat vše, co já sama používám pro svůj vlastní rozvoj a pro zlepšení života všech ostatních. Jsem nadšená z toho, že další lidé nemusí sebou dál tahat to, co jim v jejich životech nevyhovuje.</div>
+        </div>
+        <div style="min-width:220px;max-width:220px;border-radius:16px;overflow:hidden;border:1.5px solid #EDE8DF;">
+          <img src="/images/jarka-matuzkova.png" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;min-height:280px;">
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="zb-gold-bar"></div>
+<div class="zb-gold-bar"></div>
 
   <!-- PRO KOHO -->
   <div class="zb-sec">
@@ -664,13 +915,340 @@
 
   <div class="zb-gold-bar"></div>
 
+  <!-- ====================== SEKCE: REFERENCE ====================== -->
+  <div class="zb-sec zb-ref-section" id="reference">
+    <div class="zb-ref-inner">
+      <div class="zb-label" style="text-align:center">Zkušenosti účastnic</div>
+      <h2 class="zb-h2" style="text-align:center">Co říkají ty, které kurzem prošly</h2>
+      <div class="zb-ref-divider" aria-hidden="true"></div>
+
+      <div class="zb-ref-grid">
+
+        <!-- Reference 1 — Zuzanka I. -->
+        <article class="zb-ref-card">
+          <span class="zb-ref-quotemark" aria-hidden="true">&ldquo;</span>
+          <div class="zb-ref-head">
+            <img class="zb-ref-avatar" src="/images/ref-zuzanka-i.png" alt="Zuzanka I." loading="lazy" width="72" height="72">
+            <div>
+              <p class="zb-ref-name">Zuzanka I.</p>
+              <p class="zb-ref-role">terapeutka</p>
+            </div>
+          </div>
+          <p class="zb-ref-quote">
+            Vstupní terapie s Haničkou mě natolik zasáhla svou hloubkou a precizností, že jsem se rozhodla absolvovat její kurz automatické diagnostické kresby. Dnes ji vřele doporučuji všem jako skvělý základ pro porozumění energiím.
+            <span class="zb-ref-quote-more"> Ačkoliv sama pracuji jako terapeutka, kresbu využívám denně &mdash; pro sebe, svou rodinu i jako efektivní doplněk při práci s klienty. Je to pro mě nepostradatelný nástroj, ke kterému se ráda vracím zejména v náročných momentech, kdy potřebuji jasný náhled. O automatickou diagnostickou kresbu se mohu kdykoliv opřít pro její přirozenou neutralitu.</span>
+          </p>
+          <button type="button" class="zb-ref-toggle" aria-expanded="false">Číst celé <span class="zb-ref-toggle-arrow">&#8595;</span></button>
+        </article>
+
+        <!-- Reference 2 — Zuzanka B. -->
+        <article class="zb-ref-card">
+          <span class="zb-ref-quotemark" aria-hidden="true">&ldquo;</span>
+          <div class="zb-ref-head">
+            <img class="zb-ref-avatar" src="/images/ref-zuzanka-b.png" alt="Zuzanka B." loading="lazy" width="72" height="72">
+            <div>
+              <p class="zb-ref-name">Zuzanka B.</p>
+              <p class="zb-ref-role">absolventka kurzu a osobního vedení</p>
+            </div>
+          </div>
+          <p class="zb-ref-quote">
+            Setkání s Hankou pro mě bylo opravdu velkým darem do života. Netušila jsem, že součástí této cesty bude i poznání, jaké je to žít v lehkosti.
+            <span class="zb-ref-quote-more"> Absolvovala jsem terapii, kurz i osobní vedení. Dlouhodobá spolupráce mi dala opravdu mnoho a vnímám ji jako jednu z největších investic do mého života. Velmi oceňuji laskavost celé filozofie a bezpečí, ve kterém jsem mohla být otevřená a sdílet své otázky bez obavy z hodnocení. Díky této cestě dnes procházím každodenním životem s větším klidem a důvěrou &mdash; i v náročných obdobích mi osobní vedení poskytlo velkou oporu.</span>
+          </p>
+          <button type="button" class="zb-ref-toggle" aria-expanded="false">Číst celé <span class="zb-ref-toggle-arrow">&#8595;</span></button>
+        </article>
+
+        <!-- Reference 3 — Jitka H. -->
+        <article class="zb-ref-card">
+          <span class="zb-ref-quotemark" aria-hidden="true">&ldquo;</span>
+          <div class="zb-ref-head">
+            <img class="zb-ref-avatar" src="/images/ref-jitka-h.png" alt="Jitka H." loading="lazy" width="72" height="72">
+            <div>
+              <p class="zb-ref-name">Jitka H.</p>
+              <p class="zb-ref-role">absolventka kurzu AKD</p>
+            </div>
+          </div>
+          <p class="zb-ref-quote">
+            Na začátku jsem neměla ponětí, jak mocný nástroj absolvováním tohoto kurzu získám.
+            <span class="zb-ref-quote-more"> Až v průběhu kurzu člověk zjišťuje, co vše je možné si ve svém životě i své rodiny vykreslit, vyladit, narovnat &mdash; upřímně neskutečné, to pochopí až samotným absolvováním. Tahle automatická kresba je prostě dar a úžasný, nejlepší pomocník v každodenním životě. Děkuji za něj.</span>
+          </p>
+          <button type="button" class="zb-ref-toggle" aria-expanded="false">Číst celé <span class="zb-ref-toggle-arrow">&#8595;</span></button>
+        </article>
+
+        <!-- Reference 4 — Hanka V. -->
+        <article class="zb-ref-card">
+          <span class="zb-ref-quotemark" aria-hidden="true">&ldquo;</span>
+          <div class="zb-ref-head">
+            <img class="zb-ref-avatar" src="/images/ref-hanka-v.png" alt="Hanka V." loading="lazy" width="72" height="72">
+            <div>
+              <p class="zb-ref-name">Hanka V.</p>
+              <p class="zb-ref-role">absolventka kurzu a osobního vedení</p>
+            </div>
+          </div>
+          <p class="zb-ref-quote">
+            Kurz AKD pro mě byl vlastně vstupní bránou k celé metodě JIH. Díky němu jsem se naučila velmi rychle pomáhat si v životních situacích.
+            <span class="zb-ref-quote-more"> Postupně, krok za krokem, jsme s Haničkou sundávaly vrstvy, které mě dlouho trápily a omezovaly. Svým laskavým přístupem mi vždy dokázala ukázat jiný úhel pohledu, který jsem sama v danou chvíli nedokázala vidět &mdash; a přišla úleva, že problém není černobílý. Vždy mi dodala pocit jistoty, že na vše je řešení. Našla jsem v ní blízkého přítele a průvodce, který ukáže cestu z jakékoliv životní situace.</span>
+          </p>
+          <button type="button" class="zb-ref-toggle" aria-expanded="false">Číst celé <span class="zb-ref-toggle-arrow">&#8595;</span></button>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .zb-ref-inner{ max-width:1120px; margin:0 auto; }
+    .zb-ref-divider{ width:64px; height:2px; background:#C9A84C; margin:1.25rem auto 3rem; border-radius:2px; }
+    .zb-ref-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:28px; text-align:left; }
+    @media (max-width:760px){ .zb-ref-grid{ grid-template-columns:1fr; } }
+    .zb-ref-card{ position:relative; background:#FCFAF6; border:1px solid rgba(201,168,76,0.25); border-radius:20px; padding:32px 28px 26px; box-shadow:0 4px 18px rgba(26,26,26,0.05); display:flex; flex-direction:column; transition:box-shadow .25s ease, transform .25s ease; }
+    .zb-ref-card:hover{ box-shadow:0 10px 28px rgba(201,168,76,0.18); transform:translateY(-3px); }
+    .zb-ref-quotemark{ position:absolute; top:8px; right:24px; font-family:'Cormorant Garamond', serif; font-size:88px; line-height:1; color:#F5D5C8; font-weight:600; pointer-events:none; user-select:none; }
+    .zb-ref-head{ display:flex; align-items:center; gap:14px; margin-bottom:16px; z-index:1; }
+    .zb-ref-avatar{ width:72px; height:72px; border-radius:50%; display:block; flex-shrink:0; object-fit:cover; }
+    .zb-ref-name{ font-family:'Montserrat', sans-serif; font-weight:700; font-size:16px; color:#1A1A1A; margin:0; }
+    .zb-ref-role{ font-family:'Montserrat', sans-serif; font-size:12.5px; color:#8a8a8a; margin:2px 0 0; }
+    .zb-ref-quote{ font-family:'Montserrat', sans-serif; font-size:15px; line-height:1.7; color:#3a3a3a; margin:0; position:relative; z-index:1; }
+    .zb-ref-quote-more{ display:none; }
+    .zb-ref-card.is-open .zb-ref-quote-more{ display:inline; }
+    .zb-ref-toggle{ margin-top:14px; align-self:flex-start; background:none; border:none; font-family:'Montserrat', sans-serif; font-weight:600; font-size:13px; color:#C9A84C; cursor:pointer; padding:0; display:flex; align-items:center; gap:6px; z-index:1; }
+    .zb-ref-toggle:hover{ color:#a9873a; }
+    .zb-ref-toggle-arrow{ display:inline-block; transition:transform .2s ease; font-size:11px; }
+    .zb-ref-card.is-open .zb-ref-toggle-arrow{ transform:rotate(180deg); }
+  </style>
+
+  <script>
+    document.querySelectorAll('.zb-ref-toggle').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var card = btn.closest('.zb-ref-card');
+        var isOpen = card.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        btn.childNodes[0].textContent = isOpen ? 'Skrýt ' : 'Číst celé ';
+      });
+    });
+  </script>
+  <!-- ==================== /SEKCE: REFERENCE ==================== -->
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- ====================== SEKCE: FAQ ====================== -->
+  <div class="zb-sec" id="faq">
+    <div class="zb-faq-wrap">
+      <div class="zb-label" style="text-align:center">Časté otázky</div>
+      <h2 class="zb-h2" style="text-align:center">Často kladené otázky</h2>
+
+      <div class="zb-faq-list">
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">1</span>
+            <span>Musím umět kreslit nebo mít výtvarné nadání?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Ne. Automatická kresba diagnostická není o výtvarném umění. Neposuzujeme, jak kresba vypadá, ale jaké informace a energie se v ní zobrazují. Stačí umět vzít pastelku do ruky. Vše ostatní se naučíš krok za krokem.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">2</span>
+            <span>Je kurz vhodný i pro úplného začátečníka?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Určitě ano. Celý kurz je vytvořen tak, aby jím mohl projít i člověk, který o metodě JIH® ani Automatické kresbě diagnostické nikdy neslyšel. Začínáme úplnými základy a jednotlivé dovednosti na sebe logicky navazují.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">3</span>
+            <span>Co když mám pocit, že nic necítím nebo neumím vnímat?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">To je naprosto běžná obava — myslí si to skoro každý. Právě proto začínáme aktivací vnímání a cítění. Naučíš se využívat své tělo jako přirozený kompas a postupně získáš jistotu ve svém vnímání. Díky mé zpětné vazbě se nebudeš učit metodu sama.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">4</span>
+            <span>Kolik času mi kurz zabere?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Kurz je rozdělen do přehledných modulů. Záleží jen na tobě, jakým tempem budeš postupovat. Doporučuji vyhradit si přibližně 30&ndash;60 minut denně na sledování videí a vlastní kresbu. Pokud budeš chtít některým tématům věnovat více času, můžeš. Kurz se přizpůsobuje tobě, ne ty kurzu.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">5</span>
+            <span>Jak dlouho budu mít ke kurzu přístup?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Ke kurzu získáváš přístup na 3 měsíce. To je dostatek času projít všechny moduly, opakovat si jednotlivé části a vracet se k nim podle potřeby. Nemusíš mít obavy, že vše musíš zvládnout během několika dnů.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">6</span>
+            <span>Jak probíhá podpora během kurzu?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Po dobu kurzu se mnou zůstáváš v kontaktu. Můžeš mi posílat své kresby, ptát se na vše, co nebude jasné, a získáš ode mě zpětnou vazbu. Součástí kurzu jsou také společná Zoom setkání, kde vše společně projdeme.</p>
+            <p class="zb-p">Podporu si můžeš zvolit podle toho, jakým způsobem chceš kurzem projít &mdash; obě varianty jsou navrženy tak, aby se přizpůsobily tvému tempu i tvé každodennosti.</p>
+            <p class="zb-p"><strong>🌿 AKD &ndash; Samostudium s podporou</strong><br>Pro ty, kteří chtějí projít kurzem vlastním tempem a využít mou zpětnou vazbu ke kresbám i společná Zoom setkání.</p>
+            <p class="zb-p"><strong>🌸 AKD &ndash; Osobní vedení</strong><br>Pro ty, kteří chtějí projít kurzem pod mým přímým vedením, získat pravidelnou podporu, hlubší pochopení souvislostí a větší jistotu při práci s Automatickou kresbou diagnostickou metodou JIH®.</p>
+            <p class="zb-p">Ať si vybereš kteroukoliv variantu, mým cílem je, aby ses naučila důvěřovat svému vnímání a získala nástroj, který ti bude oporou po celý život.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">7</span>
+            <span>Jaký je rozdíl mezi variantou Samostudium s podporou a Osobní vedení?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Obě varianty obsahují kompletní online kurz Automatické kresby diagnostické metodou JIH® se všemi výukovými videi, materiály i praktickými cvičeními.</p>
+            <p class="zb-p"><strong>🌿 AKD &ndash; Samostudium s podporou</strong><br>Je určeno pro ty, kteří chtějí kurzem projít vlastním tempem. Součástí je zpětná vazba ke kresbám a dvě společná Zoom setkání, díky kterým získáš jistotu v jednotlivých krocích a ukotvíš si nové dovednosti.</p>
+            <p class="zb-p"><strong>🌸 AKD &ndash; Osobní vedení</strong><br>Je určeno pro ty, kteří chtějí projít kurzem pod mým přímým vedením. Kromě všeho, co obsahuje varianta Samostudium s podporou, získáš také pravidelnou komunikaci přes WhatsApp a společná Zoom setkání přibližně jednou za 14 dní. Díky osobnímu vedení můžeme jít více do hloubky, věnovat se tvým konkrétním otázkám, souvislostem i kresbám a podpořit tvé vnímání tak, aby ses v práci s AKD cítila jistě a přirozeně.</p>
+            <p class="zb-p">V obou variantách je mým cílem jediné &mdash; naučit tě pracovat s Automatickou kresbou diagnostickou tak, aby ses postupně stala sama sobě oporou v každodenním životě.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">8</span>
+            <span>Kdy mohu začít?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Přístup do kurzu získáš po připsání platby. Poté můžeš začít kdykoliv a postupovat vlastním tempem.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">9</span>
+            <span>Je možné platit na splátky?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Ano. Pokud by pro tebe byla jednorázová platba překážkou, napiš mi a společně najdeme vhodné řešení.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">10</span>
+            <span>Je tento kurz vhodný pro mě?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Pokud cítíš, že chceš lépe porozumět sobě, naučit se pracovat se svými emocemi a získat nástroj, který můžeš využívat po celý život, pak ano. Nemusíš mít žádné zkušenosti s terapiemi ani s kresbou. Stačí otevřenost učit se novému a chuť udělat krok blíž sama k sobě.</p>
+          </div>
+        </div>
+
+        <div class="zb-faq-item">
+          <button type="button" class="zb-faq-q" onclick="zbFaqToggle(this)">
+            <span class="zb-faq-num">11</span>
+            <span>Mohu po absolvování kurzu pomáhat i svým blízkým?</span>
+            <span class="zb-faq-icon">+</span>
+          </button>
+          <div class="zb-faq-a">
+            <p class="zb-p">Ano. V průběhu kurzu však nejprve pracuješ sama se sebou. Díky vlastní zkušenosti pochopíš, jak Automatická kresba diagnostická funguje, osvojíš si vnímání a cítění a získáš jistotu v diagnostice. Teprve potom doporučuji metodu využívat i pro své blízké nebo další osoby. Vlastní prožitek je totiž tím nejlepším učitelem.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .zb-faq-wrap{ max-width:760px; margin:0 auto; }
+    .zb-faq-list{ margin-top:2rem; }
+    .zb-faq-item{
+      border-top:1px solid rgba(201,168,76,0.35);
+      border-radius:10px;
+      transition:background 0.25s ease;
+    }
+    .zb-faq-item:last-child{ border-bottom:1px solid rgba(201,168,76,0.35); }
+    .zb-faq-item.open{
+      background:#FCFAF6;
+      border-top-color:rgba(201,168,76,0.6);
+    }
+    .zb-faq-q{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1.25rem;
+      background:none;
+      border:none;
+      text-align:left;
+      cursor:pointer;
+      padding:1.35rem 1.25rem;
+      font-family:'Montserrat', sans-serif;
+      font-size:15px;
+      font-weight:700;
+      color:#C9A84C;
+      transition:color 0.2s;
+    }
+    .zb-faq-q:hover{ color:#a9873a; }
+    .zb-faq-item.open .zb-faq-q{ color:#a9873a; }
+    .zb-faq-q > span:nth-of-type(2){ flex:1; }
+    .zb-faq-num{
+      width:32px; height:32px; border-radius:8px;
+      background:linear-gradient(135deg, #F5EDD5, #EDD98A);
+      display:flex; align-items:center; justify-content:center;
+      font-size:13px; font-weight:700; color:#8B6A1A; flex-shrink:0;
+      font-family:'Montserrat', sans-serif;
+    }
+    .zb-faq-icon{
+      flex-shrink:0;
+      font-size:20px;
+      font-weight:400;
+      color:#C9A84C;
+      transition:transform 0.25s ease;
+      line-height:1;
+    }
+    .zb-faq-item.open .zb-faq-icon{ transform:rotate(45deg); }
+    .zb-faq-a{
+      display:none;
+      padding:0 1.75rem 1.5rem 1.25rem;
+      border-left:3px solid #C9A84C;
+      margin:0 1.25rem 1.25rem;
+    }
+    .zb-faq-item.open .zb-faq-a{ display:block; }
+    .zb-faq-a .zb-p{ margin-bottom:0.9rem; padding-left:0.85rem; }
+    .zb-faq-a .zb-p:last-child{ margin-bottom:0; }
+  </style>
+
+  <script>
+    function zbFaqToggle(btn){
+      var item = btn.closest('.zb-faq-item');
+      item.classList.toggle('open');
+    }
+  </script>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- ==================== /SEKCE: FAQ ==================== -->
+
   <!-- CTA -->
   <div class="zb-cta" id="zb-cta">
     <div class="zb-label" style="text-align:center">Investice do sebe</div>
     <div class="zb-price">6 790 Kč</div>
     <div class="zb-price-sub">vč. DPH</div>
     <a href="FLIXY_ODKAZ_SEM" class="zb-cta-btn">Chci se zapsat do kurzu</a>
-    <p class="zb-guarantee">✓ Přístup získáš ihned po zaplacení &nbsp;·&nbsp; ✓ Přístup na 2 měsíce</p>
+    <p class="zb-guarantee">✓ Přístup získáš ihned po zaplacení &nbsp;·&nbsp; ✓ Přístup na 3 měsíce</p>
   </div>
 
   <!-- ZÁVĚR -->
