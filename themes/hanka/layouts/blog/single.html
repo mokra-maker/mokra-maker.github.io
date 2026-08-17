@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+<section>
+  {{ with .Params.category }}<p class="section-label">{{ . }}</p>{{ else }}<p class="section-label">Blog</p>{{ end }}
+  <span class="accent-rule"></span>
+  <h1>{{ .Title }}</h1>
+  {{ if not .Date.IsZero }}<p class="blog-meta">{{ .Date.Format "2. 1. 2006" }}</p>{{ end }}
+  <div style="max-width:680px;font-size:1.1rem;">{{ .Content }}</div>
+  <p style="margin-top:3rem;"><a href="/blog/" class="blog-read-more">&larr; Zpět na blog</a></p>
+</section>
+
+{{ end }}

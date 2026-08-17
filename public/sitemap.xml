@@ -4,9 +4,17 @@
   <url>
     <loc>http://localhost:1313/kurz-automaticka-kresba-diagnosticka/</loc>
   </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/kontakt/</loc>
+  </url><url>
+    <loc>http://localhost:1313/metoda-jih/</loc>
+  </url><url>
+    <loc>http://localhost:1313/o-mne/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url>

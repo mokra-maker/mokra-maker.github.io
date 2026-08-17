@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Hanka Mokrá</title>
+		<title>Hanka Mokrá | Garant metody JIH®</title>
 		<link>http://localhost:1313/</link>
-		<description>Recent content on Hanka Mokrá</description>
+		<description>Recent content on Hanka Mokrá | Garant metody JIH®</description>
 		<generator>Hugo</generator>
 		<language>cs</language>
 		
@@ -16,6 +16,34 @@
 				<link>http://localhost:1313/kurz-automaticka-kresba-diagnosticka/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/kurz-automaticka-kresba-diagnosticka/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Kontakt</title>
+				<link>http://localhost:1313/kontakt/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/kontakt/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Metoda JIH®</title>
+				<link>http://localhost:1313/metoda-jih/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/metoda-jih/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>O mně</title>
+				<link>http://localhost:1313/o-mne/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/o-mne/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Osobní vedení</title>
+				<link>http://localhost:1313/osobni-vedeni/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/osobni-vedeni/</guid>
 				<description></description>
 			</item>
 	</channel>

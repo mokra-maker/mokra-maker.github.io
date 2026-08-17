@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<section>
+  <p class="section-label">Blog</p>
+  <span class="accent-rule"></span>
+  <h1>Blog</h1>
+  <p class="blog-intro">{{ if .Content }}{{ .Content }}{{ else }}Články o metodě JIH&reg;, cestě k prosperitě a osobnímu rozvoji.{{ end }}</p>
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ if $pages }}
+    {{ $featured := index $pages 0 }}
+    {{ $rest := after 1 $pages }}
+
+    <div class="blog-featured">
+      <div class="blog-featured-image">{{ with $featured.Params.image }}<img src="{{ . }}" alt="{{ $featured.Title }}">{{ end }}</div>
+      <div>
+        {{ with $featured.Params.category }}<span class="blog-tag">{{ . }}</span>{{ end }}
+        <h2><a href="{{ $featured.Permalink }}" style="color:inherit;text-decoration:none;">{{ $featured.Title }}</a></h2>
+        <p class="excerpt">{{ $featured.Summary }}</p>
+        <a href="{{ $featured.Permalink }}" class="btn">Číst dál</a>
+      </div>
+    </div>
+
+    {{ if $rest }}
+    <div class="blog-grid">
+      {{ range $rest }}
+      <div class="blog-card">
+        <div class="blog-card-image">{{ with .Params.image }}<img src="{{ . }}" alt="{{ .Title }}">{{ end }}</div>
+        {{ with .Params.category }}<span class="blog-tag">{{ . }}</span>{{ end }}
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .Permalink }}" class="blog-read-more">Číst dál &rarr;</a>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  {{ else }}
+    <div class="blog-empty">
+      <p>Tady brzy najdete první článek. Obsah blogu teď připravuji — mrkněte prosím zase brzy.</p>
+    </div>
+  {{ end }}
+</section>
+
+{{ end }}

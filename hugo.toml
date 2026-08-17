@@ -4,7 +4,7 @@ title = 'Hanka Mokrá | Garant metody JIH®'
 theme = 'hanka'
 
 [params]
-  description = 'Garant metody JIH® s 15letou zkušeností. Osobní vedení, konzultace a kurzy pro ženy 45–55 let, které už nechtějí čekat.'
+  description = 'Garant metody JIH® s 15letou zkušeností. Osobní vedení a vzdělávací cesta pro ženy 45–55 let, které už nechtějí čekat, ale chtějí konečně žít naplno.'
 
 [[menu.main]]
   name = 'O mně'
@@ -17,26 +17,21 @@ theme = 'hanka'
   weight = 20
 
 [[menu.main]]
-  name = 'Konzultace'
-  url = '/konzultace/'
-  weight = 30
-
-[[menu.main]]
   name = 'Osobní vedení'
   url = '/osobni-vedeni/'
-  weight = 40
+  weight = 30
 
 [[menu.main]]
   name = 'Blog'
   url = '/blog/'
-  weight = 50
+  weight = 40
 
 [[menu.main]]
   name = 'Spolupráce'
   url = '/spoluprace/'
-  weight = 60
+  weight = 50
 
 [[menu.main]]
   name = 'Kontakt'
   url = '/kontakt/'
-  weight = 70
+  weight = 60

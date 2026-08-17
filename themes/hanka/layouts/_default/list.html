@@ -1,9 +1,11 @@
 {{ define "main" }}
 <section>
+  <p class="section-label">{{ .Title }}</p>
+  <span class="accent-rule"></span>
   <h1>{{ .Title }}</h1>
-  {{ .Content }}
+  <div style="max-width:640px;font-size:1.1rem;color:var(--text-muted);">{{ .Content }}</div>
   {{ range .Pages }}
-  <div class="service-card" style="margin-bottom:2rem">
+  <div class="service-card" style="margin-bottom:2rem;margin-top:2rem;">
     <h3><a href="{{ .Permalink }}" style="color:var(--text);text-decoration:none">{{ .Title }}</a></h3>
     <p>{{ .Summary }}</p>
   </div>
