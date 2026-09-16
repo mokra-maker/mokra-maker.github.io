@@ -31,12 +31,11 @@
 </nav>
 
   <main>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-.zb { font-family: 'Montserrat', sans-serif; color: #1A1A1A; max-width: 100%; }
+.zb { font-family: 'Inter', sans-serif; color: var(--text); max-width: 100%; }
 
-.zb-card-img { background:#fff; border:1.5px solid #D4C4A0; border-radius:20px; overflow:hidden; box-shadow:0 4px 20px rgba(201,168,76,0.12); }
+.zb-card-img { background:#fff; border:1px solid var(--divider); border-radius: 0; overflow:hidden; }
 .zb-card-body { padding:1.25rem 1.25rem 1.5rem; }
  
 .zb-hero {
@@ -59,85 +58,83 @@
   display: flex; flex-direction: column; justify-content: center;
 }
 .zb-badge {
-  display: inline-block; background: #C9A84C;
+  display: inline-block; background: var(--gold);
   color: #fff; font-size: 11px; font-weight: 700;
   letter-spacing: 0.12em; text-transform: uppercase;
-  padding: 7px 20px; border-radius: 50px; margin-bottom: 1.5rem;
-  box-shadow: 0 2px 10px rgba(201,168,76,0.3);
+  padding: 7px 20px; border-radius: 5px; margin-bottom: 1.5rem;
 }
 .zb-hero-h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 38px; font-weight: 600; line-height: 1.2; color: #1A1A1A;
+  font-family: 'Fraunces', serif;
+  font-size: 38px; font-weight: 600; line-height: 1.2; color: var(--text);
   margin-bottom: 0.75rem;
 }
 .zb-hero-h1::after {
   content: ''; display: block; height: 2px; width: 60%;
-  background: linear-gradient(to right, #C9A84C, #E8D07A); margin-top: 10px;
+  background: var(--gold); margin-top: 10px;
 }
 .zb-hero-sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 26px; font-weight: 600; font-style: italic; color: #C9A84C; line-height: 1.35; margin: 1rem 0 1.25rem;
+  font-family: 'Fraunces', serif;
+  font-size: 26px; font-weight: 600; font-style: italic; color: var(--gold); line-height: 1.35; margin: 1rem 0 1.25rem;
 }
-.zb-hero-p { font-size: 15px; color: #5A5A5A; line-height: 1.85; margin-bottom: 2rem; }
+.zb-hero-p { font-size: 15px; color: var(--text-muted); line-height: 1.85; margin-bottom: 2rem; }
 
  
 .zb-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #C9A84C, #E8D07A, #C9A84C);
+  background: var(--gold); border: 1px solid var(--gold);
   color: #fff; font-size: 12px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 0.9rem 2.5rem; border-radius: 50px;
-  text-decoration: none; text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  box-shadow: 0 4px 16px rgba(201,168,76,0.35); align-self: flex-start;
+  padding: 0.9rem 2.5rem; border-radius: 5px;
+  text-decoration: none; align-self: flex-start;
+  transition: background 0.3s, opacity 0.3s;
 }
-.zb-btn:hover { opacity: 0.9; color: #fff; }
+.zb-btn:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: #fff; }
 
  
-.zb-gold-bar { height: 2px; background: linear-gradient(to right, transparent, #C9A84C, #E8D07A, #C9A84C, transparent); }
+.zb-gold-bar { height: 1px; background: var(--divider); }
 .zb-diamond { display: flex; align-items: center; gap: 1rem; padding: 2rem 2.5rem; background: #fff; }
-.zb-diamond .line { flex: 1; height: 0.5px; background: #E8E0D0; }
-.zb-diamond .gem { width: 8px; height: 8px; background: #C9A84C; transform: rotate(45deg); }
+.zb-diamond .line { flex: 1; height: 0.5px; background: var(--divider); }
+.zb-diamond .gem { width: 8px; height: 8px; background: var(--gold); transform: rotate(45deg); }
 
  
 .zb-sec { background: #fff; padding: 4rem 2.5rem; }
-.zb-sec-warm { background: #FDFBF7; padding: 4rem 2.5rem; }
+.zb-sec-warm { background: var(--cream); padding: 4rem 2.5rem; }
 
  
-.zb-label { font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A84C; margin-bottom: 0.75rem; font-family: 'Montserrat', sans-serif; }
-.zb-h2 { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600; color: #1A1A1A; line-height: 1.2; margin-bottom: 1.25rem; }
-.zb-p { font-size: 16px; color: #5A5A5A; line-height: 1.85; font-family: 'Montserrat', sans-serif; }
-.zb li, .zb ul, .zb ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5A5A; line-height: 1.85; }
-.zb-list li { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5A5A; line-height: 1.85; }
-li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5A5A; line-height: 1.85; }
+.zb-label { font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; font-family: 'Inter', sans-serif; }
+.zb-h2 { font-family: 'Fraunces', serif; font-size: 34px; font-weight: 600; color: var(--text); line-height: 1.2; margin-bottom: 1.25rem; }
+.zb-p { font-size: 16px; color: var(--text-muted); line-height: 1.85; font-family: 'Inter', sans-serif; }
+.zb li, .zb ul, .zb ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--text-muted); line-height: 1.85; }
+.zb-list li { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--text-muted); line-height: 1.85; }
+li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--text-muted); line-height: 1.85; }
 
  
 .zb-cards2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2rem; }
 .zb-cards3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 1.25rem; margin-top: 2rem; }
 .zb-card {
-  background: #fff; border: 1.5px solid #D4C4A0; border-radius: 20px;
+  background: #fff; border: 1px solid var(--divider); border-radius: 0;
   padding: 1.75rem 1.5rem;
-  box-shadow: 0 4px 20px rgba(201,168,76,0.12);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: border-color 0.2s;
 }
-.zb-card:hover { box-shadow: 0 8px 32px rgba(201,168,76,0.15); transform: translateY(-2px); }
+.zb-card:hover { border-color: var(--gold); }
 .zb-card-icon {
   width: 44px; height: 44px;
-  background: linear-gradient(135deg, #F5EDD5, #EDD98A);
-  border-radius: 12px; display: flex; align-items: center; justify-content: center;
-  font-size: 18px; margin-bottom: 1rem; color: #8B6A1A;
+  background: var(--peach);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 18px; margin-bottom: 1rem; color: var(--gold-dark);
 }
-.zb-card-title { font-size: 15px; font-weight: 700; color: #1A1A1A; margin-bottom: 0.6rem; font-family: 'Montserrat', sans-serif; }
-.zb-card-text { font-size: 15px; color: #5A5A5A; line-height: 1.7; font-family: 'Montserrat', sans-serif; }
+.zb-card-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; font-family: 'Inter', sans-serif; }
+.zb-card-text { font-size: 15px; color: var(--text-muted); line-height: 1.7; font-family: 'Inter', sans-serif; }
 
  
 .zb-quote-block {
-  background: #F5D5C8; border-radius: 20px;
+  background: var(--peach); border-radius: 0;
   padding: 3rem 2.5rem; text-align: center; margin: 0 2.5rem 0;
 }
-.zb-quote-mark { font-size: 60px; color: #C9A84C; line-height: 0.5; display: block; margin-bottom: 1.25rem; font-family: Georgia, serif; }
+.zb-quote-mark { font-size: 60px; color: var(--gold); line-height: 0.5; display: block; margin-bottom: 1.25rem; font-family: Georgia, serif; }
 .zb-quote-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px; font-style: italic; color: #3A2018; line-height: 1.7;
+  font-family: 'Fraunces', serif;
+  font-size: 22px; font-style: italic; color: var(--text); line-height: 1.7;
 }
 
  
@@ -145,91 +142,94 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
 .zb-list li {
   display: flex; gap: 1rem; padding: 0.6rem 0;
   border-bottom: none;
-  font-size: 15px; color: #2A2A2A; line-height: 1.7; align-items: flex-start;
+  font-size: 15px; color: var(--text); line-height: 1.7; align-items: flex-start;
 }
-.zb-list li::before { content: "◆"; color: #C9A84C; font-size: 8px; flex-shrink: 0; margin-top: 6px; }
+.zb-list li::before { content: "◆"; color: var(--gold); font-size: 8px; flex-shrink: 0; margin-top: 6px; }
 
  
 .zb-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 2rem; }
 .zb-stat {
   text-align: center; padding: 1.5rem 1rem;
-  border-radius: 20px; background: #fff;
-  border: 1.5px solid #D4C4A0;
-  box-shadow: 0 2px 12px rgba(201,168,76,0.12);
+  border-radius: 0; background: #fff;
+  border: 1px solid var(--divider);
 }
-.zb-stat-n { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: #C9A84C; }
-.zb-stat-l { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-top: 4px; }
-.zb-stat-sub { font-family: 'Montserrat', sans-serif; font-size: 13px; color: #7a7a7a; margin-top: 8px; line-height: 1.5; }
+.zb-stat-n { font-family: 'Fraunces', serif; font-size: 40px; font-weight: 600; color: var(--gold); }
+.zb-stat-l { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-top: 4px; }
+.zb-stat-sub { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
 
  
 .zb-topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px,1fr)); gap: 1rem; margin-top: 2rem; }
 .zb-topic {
-  background: #fff; border: 1.5px solid #D4C4A0; border-radius: 14px;
+  background: #fff; border: 1px solid var(--divider); border-radius: 0;
   padding: 1.1rem 1rem; text-align: center;
-  font-size: 14px; font-weight: 600; color: #2A2A2A; font-family: 'Montserrat', sans-serif;
-  box-shadow: 0 2px 8px rgba(201,168,76,0.08);
+  font-size: 14px; font-weight: 600; color: var(--text); font-family: 'Inter', sans-serif;
 }
-.zb-topic-dot { width: 8px; height: 8px; background: #C9A84C; border-radius: 50%; margin: 0 auto 0.6rem; }
+.zb-topic-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; margin: 0 auto 0.6rem; }
 
  
-.zb-mod { border-bottom: 0.5px solid #EDE8DF; }
+.zb-mod { border-bottom: 0.5px solid var(--divider); }
 .zb-mod-header { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 0; cursor: pointer; }
-.zb-mod-header:hover .zb-mod-title { color: #C9A84C; }
+.zb-mod-header:hover .zb-mod-title { color: var(--gold); }
 .zb-mod-num {
-  width: 32px; height: 32px; border-radius: 8px;
-  background: linear-gradient(135deg, #F5EDD5, #EDD98A);
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--peach);
   display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 700; color: #8B6A1A; flex-shrink: 0;
+  font-size: 12px; font-weight: 700; color: var(--gold-dark); flex-shrink: 0;
 }
-.zb-mod-title { font-size: 14px; font-weight: 600; color: #1A1A1A; flex: 1; transition: color 0.2s; font-family: 'Montserrat', sans-serif; }
-.zb-mod-count { font-size: 12px; color: #888; flex-shrink: 0; font-family: 'Montserrat', sans-serif; }
-.zb-mod-arrow { font-size: 18px; color: #C9A84C; transition: transform 0.2s; flex-shrink: 0; }
+.zb-mod-title { font-size: 14px; font-weight: 600; color: var(--text); flex: 1; transition: color 0.2s; font-family: 'Inter', sans-serif; }
+.zb-mod-count { font-size: 12px; color: var(--text-muted); flex-shrink: 0; font-family: 'Inter', sans-serif; }
+.zb-mod-arrow { font-size: 18px; color: var(--gold); transition: transform 0.2s; flex-shrink: 0; }
 .zb-mod-body { display: none; padding: 0 0 1.25rem 3rem; }
 .zb-mod-body.open { display: block; }
 .zb-lessons { list-style: none; }
-.zb-lessons li { padding: 0.4rem 0; font-size: 13px; color: #5A5A5A; border-bottom: 0.5px solid #F5F5F5; display: flex; gap: 0.75rem; }
+.zb-lessons li { padding: 0.4rem 0; font-size: 13px; color: var(--text-muted); border-bottom: 0.5px solid var(--divider); display: flex; gap: 0.75rem; }
 .zb-lessons li:last-child { border-bottom: none; }
-.zb-lessons li::before { content: "›"; color: #C9A84C; font-weight: 700; }
-.zb-mod-note { font-size: 12px; color: #C9A84C; margin-top: 0.5rem; font-style: italic; font-family: 'Montserrat', sans-serif; }
+.zb-lessons li::before { content: "›"; color: var(--gold); font-weight: 700; }
+.zb-mod-note { font-size: 12px; color: var(--gold); margin-top: 0.5rem; font-style: italic; font-family: 'Inter', sans-serif; }
 
  
 .zb-guides { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
 .zb-guide-card {
-  background: #fff; border: 1px solid #EDE8DF; border-radius: 20px;
+  background: #fff; border: 1px solid var(--divider); border-radius: 0;
   padding: 2rem 1.75rem;
-  box-shadow: 0 4px 20px rgba(201,168,76,0.07);
 }
-.zb-guide-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: #1A1A1A; margin-bottom: 4px; }
-.zb-guide-role { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #C9A84C; margin-bottom: 1rem; }
-.zb-guide-text { font-size: 15px; color: #5A5A5A; line-height: 1.85; font-family: 'Montserrat', sans-serif; }
+.zb-guide-name { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.zb-guide-role { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.zb-guide-text { font-size: 15px; color: var(--text-muted); line-height: 1.85; font-family: 'Inter', sans-serif; }
 .zb-guide-link { margin-top: 1rem; font-size: 13px; }
-.zb-guide-link a { color: #C9A84C; text-decoration: none; font-weight: 600; }
+.zb-guide-link a { color: var(--gold); text-decoration: none; font-weight: 600; }
 
  
-.zb-cta { text-align: center; padding: 4rem 2.5rem; background: #FDFBF7; }
-.zb-price { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 600; color: #C9A84C; line-height: 1; margin-bottom: 0.5rem; }
-.zb-price-sub { font-size: 13px; color: #888; margin-bottom: 2rem; letter-spacing: 0.05em; }
+.zb-cta { text-align: center; padding: 4rem 2.5rem; background: var(--cream); }
+.zb-price { font-family: 'Fraunces', serif; font-size: 56px; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
+.zb-price-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 2rem; letter-spacing: 0.05em; }
 .zb-cta-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #C9A84C, #E8D07A, #C9A84C);
+  background: var(--gold); border: 1px solid var(--gold);
   color: #fff; font-size: 14px; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 1.1rem 3.5rem; border-radius: 50px;
-  text-decoration: none; text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+  padding: 1.1rem 3.5rem; border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
 }
-.zb-guarantee { font-size: 12px; color: #888; margin-top: 1.25rem; letter-spacing: 0.04em; }
+.zb-cta-btn:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: #fff; }
+.zb-guarantee { font-size: 12px; color: var(--text-muted); margin-top: 1.25rem; letter-spacing: 0.04em; }
+.zb-cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; max-width: 900px; margin: 2rem auto 0; text-align: center; }
+.zb-cta-card { background: #fff; border: 1px solid var(--divider); border-radius: 0; padding: 2.25rem 1.75rem 2rem; }
+.zb-cta-card-title { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 1rem; }
+.zb-cta-card .zb-price { font-size: 42px; margin-bottom: 0.4rem; }
+.zb-cta-card .zb-price-sub { margin-bottom: 1.5rem; }
 
  
 .zb-closing { text-align: center; padding: 3rem 2.5rem; background: #fff; }
-.zb-closing-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: #5A5A5A; line-height: 1.85; max-width: 500px; margin: 0 auto; }
+.zb-closing-text { font-family: 'Fraunces', serif; font-size: 20px; font-style: italic; color: var(--text-muted); line-height: 1.85; max-width: 500px; margin: 0 auto; }
 
  
 @media (max-width: 600px) {
   .zb-hero-text { max-width: 100%; background: rgba(255,255,255,0.95); }
   .zb-hero-overlay { background: rgba(255,255,255,0.5); }
   .zb-hero-h1 { font-size: 28px; }
-  .zb-cards2, .zb-guides { grid-template-columns: 1fr; }
+  .zb-cards2, .zb-guides, .zb-cta-grid { grid-template-columns: 1fr; }
   .zb-quote-block { margin: 0; border-radius: 0; }
   .zb-sec, .zb-sec-warm { padding: 3rem 1.5rem; }
 }
@@ -262,7 +262,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
   <div class="zb-sec-warm">
     <div class="zb-label">Poznáváš se?</div>
     <h2 class="zb-h2">Ptáš se stále dokola…</h2>
-    <p style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:#1A1A1A;margin-top:0.5rem;margin-bottom:1.5rem;">Možná si některou z těchto otázek pokládáš i ty...</p>
+    <p style="font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-top:0.5rem;margin-bottom:1.5rem;">Možná si některou z těchto otázek pokládáš i ty...</p>
     <ul class="zb-list">
       <li>Proč se mi některé situace stále opakují?</li>
       <li>Proč se cítím tak, jak se cítím, i když se snažím věci změnit?</li>
@@ -280,12 +280,12 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
   <div class="zb-sec">    <div class="zb-label">Proč právě AKD</div>
     <h2 class="zb-h2">Existuje cesta, která nezačíná radou.<br>Začíná tebou.</h2>
     <p class="zb-p">Automatická kresba diagnostická metodou JIH® propojuje jednoduchou kresbu, vědomé vnímání a práci s energií. Díky tomu se učíš porozumět sobě, svým pocitům i souvislostem svého života.</p>
-    <p style="font-size:1.15rem;font-weight:600;color:#2C2C2C;margin-top:1.5rem;font-style:italic;">Nepotřebuješ umět kreslit. Nepotřebuješ žádné předchozí zkušenosti.</p>
+    <p style="font-size:1.15rem;font-weight:600;color:var(--text);margin-top:1.5rem;font-style:italic;">Nepotřebuješ umět kreslit. Nepotřebuješ žádné předchozí zkušenosti.</p>
     <div class="zb-cards3">
-        <div class="zb-card-img"><img src="/images/AKD_1.jpg" alt="Kresba" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Kresba jako jazyk tvého nitra</div><div class="zb-card-text">Jednoduchý způsob, jak porozumět tomu, co se odehrává uvnitř tebe.</div></div></div>
-        <div class="zb-card-img"><img src="/images/Energie_AKD.jpg" alt="Vědomé vnímání" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Důvěra ve vlastní vnímání</div><div class="zb-card-text">Postupně se naučíš více důvěřovat sama sobě a svým pocitům.</div></div></div>
-        <div class="zb-card-img"><img src="/images/Vědomí_AKD.jpg" alt="Energie JIH®" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Porozumění souvislostem</div><div class="zb-card-text">Začneš vidět příčiny toho, co prožíváš, a lépe chápat svůj život.</div></div></div>
-        <div class="zb-card-img"><img src="/images/Změna_AKD.jpg" alt="Osobní změna" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px 16px 0 0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Proměna v každodenním životě</div><div class="zb-card-text">Skutečná změna se začne postupně promítat do tvého každodenního života.</div></div></div>
+        <div class="zb-card-img"><img src="/images/AKD_1.jpg" alt="Kresba" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Kresba jako jazyk tvého nitra</div><div class="zb-card-text">Jednoduchý způsob, jak porozumět tomu, co se odehrává uvnitř tebe.</div></div></div>
+        <div class="zb-card-img"><img src="/images/Energie_AKD.jpg" alt="Vědomé vnímání" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Důvěra ve vlastní vnímání</div><div class="zb-card-text">Postupně se naučíš více důvěřovat sama sobě a svým pocitům.</div></div></div>
+        <div class="zb-card-img"><img src="/images/Vědomí_AKD.jpg" alt="Energie JIH®" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Porozumění souvislostem</div><div class="zb-card-text">Začneš vidět příčiny toho, co prožíváš, a lépe chápat svůj život.</div></div></div>
+        <div class="zb-card-img"><img src="/images/Změna_AKD.jpg" alt="Osobní změna" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:0;display:block;"><div class="zb-card-body"><div class="zb-card-title">Proměna v každodenním životě</div><div class="zb-card-text">Skutečná změna se začne postupně promítat do tvého každodenního života.</div></div></div>
     </div>
     </div>
   </div>
@@ -310,9 +310,9 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
         <li>Vytvoříš si vlastní cestu pravidelné práce se sebou.</li>
       </ul>
     </div>
-    <div style="margin-top:2rem;background:#FFFFFF;border:1.5px solid #C9A84C;border-radius:16px;padding:1.75rem 2rem;text-align:center;box-shadow:0 4px 14px rgba(201,168,76,0.1);">
-      <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#C9A84C;margin-bottom:0.9rem;"></span>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#3A2018;line-height:1.5;margin:0;">To nejdůležitější, co si z kurzu odneseš, není kresba.<br>Je to důvěra v sebe.</p>
+    <div style="margin-top:2rem;background:#FFFFFF;border:1px solid var(--gold);border-radius: 0;padding:1.75rem 2rem;text-align:center;">
+      <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--gold);margin-bottom:0.9rem;"></span>
+      <p style="font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--text);line-height:1.5;margin:0;">To nejdůležitější, co si z kurzu odneseš, není kresba.<br>Je to důvěra v sebe.</p>
     </div>
   </div>
 
@@ -336,19 +336,19 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
     <div class="zb-label">Kdo tě touto cestou provede</div>
     <h2 class="zb-h2">Touto cestou tě provedu osobně.</h2>
 
-    <div style="display:grid;grid-template-columns:380px 1fr;gap:0;align-items:stretch;margin-bottom:2.5rem;background:#fff;border-radius:20px;border:1px solid #EDE8DF;overflow:hidden;">
+    <div style="display:grid;grid-template-columns:380px 1fr;gap:0;align-items:stretch;margin-bottom:2.5rem;background:#fff;border-radius: 0;border:1px solid var(--divider);overflow:hidden;">
       <div style="min-height:340px;overflow:hidden;">
         <img src="/images/hanka-pruvodkyne.png" style="width:100%;height:100%;object-fit:cover;object-position:center 10%;display:block;">
       </div>
       <div style="padding:2.5rem 2rem;">
-        <div style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;border:1px solid #C9A84C;border-radius:20px;padding:3px 14px;margin-bottom:0.75rem;font-family:Montserrat,sans-serif;">Průvodkyně kurzem</div>
-        <div style="font-family:Cormorant Garamond,serif;font-size:28px;font-weight:600;margin-bottom:0.5rem;color:#1A1A1A;">Hanka Mokrá</div>
-        <div style="height:2px;background:#C9A84C;width:48px;margin-bottom:1.25rem;"></div>
-        <p style="font-size:15px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1rem;"><strong>Nezačínala jsem jako někdo, kdo měl všechny odpovědi.</strong></p>
-        <p style="font-size:15px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1rem;">Stejně jako mnoho žen jsem hledala způsob, jak porozumět sobě, svým pocitům i tomu, proč se některé životní situace stále opakují.</p>
-        <p style="font-size:15px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1rem;">Právě toto hledání mě přivedlo k metodě JIH®, u jejíhož zrodu jsem měla možnost být a podílet se na jejím postupném utváření. Měla jsem také to štěstí stát u zrodu Automatické kresby diagnostické metodou JIH®, kterou vytvořila moje kolegyně a dlouholetá přítelkyně Jarka Matušková. Od samého začátku jsem mohla být součástí jejího rozvoje, učit se ji do hloubky poznávat a využívat ji nejen ve své terapeutické praxi, ale i ve svém osobním životě.</p>
-        <p style="font-size:15px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1.5rem;">Dnes mám tu čest předávat tuto metodu dál ženám, které chtějí lépe porozumět samy sobě, důvěřovat svému vnímání a stát se vědomými tvůrkyněmi vlastního života.</p>
-        <div style="border-left:3px solid #C9A84C;padding-left:1rem;font-size:15px;font-style:italic;color:#5A5A5A;font-family:Montserrat,sans-serif;line-height:1.85;">A právě proto vznikl i tento online kurz.<br><strong>Ne proto, aby ti říkal, co máš dělat.</strong><br><strong>Ale proto, aby tě krok za krokem naučil nacházet vlastní odpovědi.</strong></div>
+        <div style="display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);border-radius: 0;padding:3px 14px;margin-bottom:0.75rem;font-family:Inter,sans-serif;">Průvodkyně kurzem</div>
+        <div style="font-family:Fraunces,serif;font-size:28px;font-weight:600;margin-bottom:0.5rem;color:var(--text);">Hanka Mokrá</div>
+        <div style="height:2px;background:var(--gold);width:48px;margin-bottom:1.25rem;"></div>
+        <p style="font-size:15px;line-height:1.85;color:var(--text-muted);font-family:Inter,sans-serif;margin-bottom:1rem;"><strong>Nezačínala jsem jako někdo, kdo měl všechny odpovědi.</strong></p>
+        <p style="font-size:15px;line-height:1.85;color:var(--text-muted);font-family:Inter,sans-serif;margin-bottom:1rem;">Stejně jako mnoho žen jsem hledala způsob, jak porozumět sobě, svým pocitům i tomu, proč se některé životní situace stále opakují.</p>
+        <p style="font-size:15px;line-height:1.85;color:var(--text-muted);font-family:Inter,sans-serif;margin-bottom:1rem;">Právě toto hledání mě přivedlo k metodě JIH®, u jejíhož zrodu jsem měla možnost být a podílet se na jejím postupném utváření. Měla jsem také to štěstí stát u zrodu Automatické kresby diagnostické metodou JIH®, kterou vytvořila moje kolegyně a dlouholetá přítelkyně Jarka Matušková. Od samého začátku jsem mohla být součástí jejího rozvoje, učit se ji do hloubky poznávat a využívat ji nejen ve své terapeutické praxi, ale i ve svém osobním životě.</p>
+        <p style="font-size:15px;line-height:1.85;color:var(--text-muted);font-family:Inter,sans-serif;margin-bottom:1.5rem;">Dnes mám tu čest předávat tuto metodu dál ženám, které chtějí lépe porozumět samy sobě, důvěřovat svému vnímání a stát se vědomými tvůrkyněmi vlastního života.</p>
+        <div style="border-left:3px solid var(--gold);padding-left:1rem;font-size:15px;font-style:italic;color:var(--text-muted);font-family:Inter,sans-serif;line-height:1.85;">A právě proto vznikl i tento online kurz.<br><strong>Ne proto, aby ti říkal, co máš dělat.</strong><br><strong>Ale proto, aby tě krok za krokem naučil nacházet vlastní odpovědi.</strong></div>
       </div>
     </div>
 
@@ -415,7 +415,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
         <div class="akd-barva-item">
           <div class="akd-barva-dot" style="background:#F1C40F;"></div>
           <div class="akd-barva-text">
-            <span class="akd-barva-nazev" style="color:#C9A84C;">Žlutá</span>
+            <span class="akd-barva-nazev" style="color:var(--gold);">Žlutá</span>
             <span class="akd-barva-podtitul">Napojení na zdroj, víra a vnitřní klid</span>
             <p>Barva světla a důvěry v život. Propojuje duchovní rovinu s každodenní realitou a ukazuje, zda cítíte, že „nejste na všechno sami".</p>
           </div>
@@ -443,9 +443,9 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
 
         
         <div class="akd-barva-item">
-          <div class="akd-barva-dot" style="background:#2C2C2C;"></div>
+          <div class="akd-barva-dot" style="background:var(--text);"></div>
           <div class="akd-barva-text">
-            <span class="akd-barva-nazev" style="color:#2C2C2C;">Černá</span>
+            <span class="akd-barva-nazev" style="color:var(--text);">Černá</span>
             <span class="akd-barva-podtitul">Diagnostická a klíčující barva</span>
             <p>Hloubková diagnostika energetických bloků. Pojmenovává zdroje neprůchodnosti, stará zranění a místa, kde je třeba přinést světlo.</p>
           </div>
@@ -473,7 +473,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
 .akd-barvy-section {
   background: #fff;
   padding: 80px 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .akd-barvy-inner {
@@ -490,22 +490,22 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
 .akd-gold-line {
   width: 80px;
   height: 2px;
-  background: #C9A84C;
+  background: var(--gold);
   margin: 16px auto;
 }
 
 .akd-barvy-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 600;
-  color: #2C2C2C;
+  color: var(--text);
   margin: 0;
   letter-spacing: 0.02em;
 }
 
 .akd-barvy-subtitle {
   font-size: 1rem;
-  color: #6b6b6b;
+  color: var(--text-muted);
   margin: 8px 0 0;
   font-weight: 400;
   letter-spacing: 0.03em;
@@ -528,17 +528,15 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
 
 .akd-pastelky-img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 0;
   object-fit: contain;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-  
 }
 
 .akd-foto-caption {
   margin-top: 14px;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1rem;
-  color: #C9A84C;
+  color: var(--gold);
   font-style: italic;
   letter-spacing: 0.04em;
 }
@@ -557,7 +555,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
   align-items: flex-start;
   gap: 20px;
   padding: 24px 0;
-  border-bottom: 1px solid #f0ebe0;
+  border-bottom: 1px solid var(--divider);
 }
 
 .akd-barva-item:last-child {
@@ -570,7 +568,6 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
   height: 18px;
   border-radius: 50%;
   margin-top: 5px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .akd-barva-text {
@@ -580,7 +577,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
 }
 
 .akd-barva-nazev {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -588,17 +585,17 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
 }
 
 .akd-barva-podtitul {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1.05rem;
   font-style: italic;
-  color: #C9A84C;
+  color: var(--gold);
   font-weight: 500;
 }
 
 .akd-barva-text p {
   margin: 4px 0 0;
   font-size: 0.92rem;
-  color: #4a4a4a;
+  color: var(--text-muted);
   line-height: 1.65;
   font-weight: 400;
 }
@@ -654,24 +651,24 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
     <p class="zb-p">Nebudeš přeskakovat mezi informacemi ani tápat, co dělat dál. Krok za krokem tě provedu celou metodou &ndash; od úplných základů až po samostatnou práci s Automatickou kresbou diagnostickou ve tvém každodenním životě.</p>
     <p class="zb-p">Každý modul obsahuje krátké videolekce, průvodní texty, praktické ukázky i názorná videa. Vše je uspořádané tak, aby ses mohla učit vlastním tempem a nové dovednosti postupně převádět do svého každodenního života.</p>
 
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#1A1A1A;margin-top:2.5rem;margin-bottom:1.5rem;">Tvá cesta kurzem bude probíhat ve třech navazujících etapách.</h3>
+    <h3 style="font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:var(--text);margin-top:2.5rem;margin-bottom:1.5rem;">Tvá cesta kurzem bude probíhat ve třech navazujících etapách.</h3>
 
     <div class="zb-cards3">
       <div class="zb-card">
         <div class="zb-card-icon">🌿</div>
-        <div style="font-size:12px;font-weight:700;color:#C9A84C;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;font-family:Montserrat,sans-serif;">1. měsíc</div>
+        <div style="font-size:12px;font-weight:700;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;font-family:Inter,sans-serif;">1. měsíc</div>
         <div class="zb-card-title">Porozumíš principům metody JIH®</div>
         <div class="zb-card-text">Porozumíš základům metody JIH®, naučíš se vnímat své tělo, aktivuješ vlastní vnímání a pochopíš souvislosti, na kterých je Automatická kresba diagnostická postavená.</div>
       </div>
       <div class="zb-card">
         <div class="zb-card-icon">🎨</div>
-        <div style="font-size:12px;font-weight:700;color:#C9A84C;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;font-family:Montserrat,sans-serif;">2. měsíc</div>
+        <div style="font-size:12px;font-weight:700;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;font-family:Inter,sans-serif;">2. měsíc</div>
         <div class="zb-card-title">Naučíš se pracovat s AKD</div>
         <div class="zb-card-text">Postupně projdeme všechny barvy, diagnostiku i práci s jednotlivými principy tak, aby ses naučila s kresbou pracovat samostatně a s jistotou.</div>
       </div>
       <div class="zb-card">
         <div class="zb-card-icon">✨</div>
-        <div style="font-size:12px;font-weight:700;color:#C9A84C;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;font-family:Montserrat,sans-serif;">3. měsíc</div>
+        <div style="font-size:12px;font-weight:700;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;font-family:Inter,sans-serif;">3. měsíc</div>
         <div class="zb-card-title">Začneš využívat AKD ve svém životě</div>
         <div class="zb-card-text">Začneš využívat Automatickou kresbu diagnostickou při řešení vlastních životních situací, vztahů, emocí i každodenních témat. To, co se během kurzu naučíš, začneš přirozeně přenášet do svého života.</div>
       </div>
@@ -679,13 +676,13 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
   </div>
 
   
-  <div style="width:100vw;position:relative;left:50%;transform:translateX(-50%);background:#F5D5C8;">
-    <div style="height:3px;background:linear-gradient(to right, transparent, #C9A84C, #E8D07A, #C9A84C, transparent);"></div>
+  <div style="width:100vw;position:relative;left:50%;transform:translateX(-50%);background:var(--peach);">
+    <div style="height:1px;background:var(--divider);"></div>
     <div style="padding:3.5rem 2rem;text-align:center;">
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#1A1A1A;margin:0 0 0.85rem;">Vyber si způsob podpory, který ti bude nejlépe vyhovovat</h2>
-      <p style="font-family:'Montserrat',sans-serif;font-size:15px;color:#5A4A42;max-width:900px;margin:0 auto;line-height:1.75;white-space:normal;">Obě varianty tě naučí pracovat s Automatickou kresbou diagnostickou metodou JIH®.<br>Rozdíl je pouze v tom, kolik osobní podpory ode mě během tvé cesty budeš chtít využít.</p>
+      <h2 style="font-family:'Fraunces',serif;font-size:30px;font-weight:600;color:var(--text);margin:0 0 0.85rem;">Vyber si způsob podpory, který ti bude nejlépe vyhovovat</h2>
+      <p style="font-family:'Inter',sans-serif;font-size:15px;color:var(--text-muted);max-width:900px;margin:0 auto;line-height:1.75;white-space:normal;">Obě varianty tě naučí pracovat s Automatickou kresbou diagnostickou metodou JIH®.<br>Rozdíl je pouze v tom, kolik osobní podpory ode mě během tvé cesty budeš chtít využít.</p>
     </div>
-    <div style="height:3px;background:linear-gradient(to right, transparent, #C9A84C, #E8D07A, #C9A84C, transparent);"></div>
+    <div style="height:1px;background:var(--divider);"></div>
   </div>
 
   
@@ -700,14 +697,14 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
         <div class="zb-offer-body">
           <h3 class="zb-offer-title">🌿 AKD Standard</h3>
           <p class="zb-offer-subtitle">Pro ženy, které chtějí objevovat vlastním tempem.</p>
-          <p class="zb-p">Kurz je postavený tak, aby tě bezpečně provedl celou metodou i bez pravidelného osobního vedení. Mou podporu budeš mít po celou dobu tříměsíčního průchodu kurzem k dispozici vždy, když ji budeš potřebovat.</p>
+          <p class="zb-p">Kurz je postavený tak, aby tě bezpečně provedl celou metodou i bez pravidelného osobního vedení. První měsíc od zakoupení kurzu se ti budu věnovat intenzivně, druhý měsíc mi pak ještě můžeš posílat své kresby ke zpětné vazbě.</p>
           <p class="zb-offer-list-label">Součástí programu je:</p>
           <ul class="zb-check-list">
             <li>Kompletní online kurz (7&ndash;10 modulů)</li>
             <li>Více než 50 praktických videolekcí</li>
             <li>Průvodní texty ke každému modulu i lekci</li>
             <li>Pracovní materiály a skripta</li>
-            <li>Moje podpora po dobu celého 3měsíčního průchodu kurzem</li>
+            <li>Moje intenzivní podpora první měsíc, druhý měsíc ještě zpětná vazba ke kresbám</li>
             <li>Přístup ke kurzu na 2 roky</li>
             <li>Uzavřená WhatsApp skupina</li>
             <li>Možnost průběžně pokládat otázky</li>
@@ -760,14 +757,14 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
     .zb-offer-hint{
       margin-top:1.5rem;
       padding:1rem 1.25rem;
-      background:#FCFAF6;
-      border-left:3px solid #C9A84C;
-      border-radius:8px;
+      background:var(--cream);
+      border-left:3px solid var(--gold);
+      border-radius: 0;
     }
     .zb-offer-hint p{
-      font-family:'Montserrat',sans-serif;
+      font-family:'Inter',sans-serif;
       font-size:14px;
-      color:#5A4A42;
+      color:var(--text-muted);
       line-height:1.7;
       margin:0;
     }
@@ -782,10 +779,9 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
     }
     .zb-offer-card{
       background:#fff;
-      border:2px solid #C9A84C;
-      border-radius:20px;
+      border:1px solid var(--divider);
+      border-radius: 0;
       overflow:hidden;
-      box-shadow:0 4px 18px rgba(26,26,26,0.06);
     }
     .zb-offer-img-wrap{
       width:100%;
@@ -802,24 +798,24 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
       padding:2rem 1.75rem 2.25rem;
     }
     .zb-offer-title{
-      font-family:'Cormorant Garamond',serif;
+      font-family:'Fraunces',serif;
       font-size:26px;
       font-weight:600;
-      color:#1A1A1A;
+      color:var(--text);
       margin:0 0 0.4rem;
     }
     .zb-offer-subtitle{
-      font-family:'Montserrat',sans-serif;
+      font-family:'Inter',sans-serif;
       font-size:14px;
       font-style:italic;
-      color:#8B6A1A;
+      color:var(--gold-dark);
       margin:0 0 1rem;
     }
     .zb-offer-list-label{
-      font-family:'Montserrat',sans-serif;
+      font-family:'Inter',sans-serif;
       font-weight:700;
       font-size:14px;
-      color:#1A1A1A;
+      color:var(--text);
       margin:1.5rem 0 0.75rem;
     }
     .zb-check-list{
@@ -830,9 +826,9 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
     .zb-check-list > li{
       position:relative;
       padding:0.4rem 0 0.4rem 1.6rem;
-      font-family:'Montserrat',sans-serif;
+      font-family:'Inter',sans-serif;
       font-size:14.5px;
-      color:#3a3a3a;
+      color:var(--text);
       line-height:1.6;
     }
     .zb-check-list > li::before{
@@ -840,7 +836,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
       position:absolute;
       left:0;
       top:0.4rem;
-      color:#C9A84C;
+      color:var(--gold);
       font-weight:700;
     }
     .zb-check-sublist{
@@ -852,14 +848,14 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
       position:relative;
       padding:0.15rem 0 0.15rem 1.1rem;
       font-size:13.5px;
-      color:#6a6a6a;
+      color:var(--text-muted);
       line-height:1.55;
     }
     .zb-check-sublist li::before{
       content:"–";
       position:absolute;
       left:0;
-      color:#C9A84C;
+      color:var(--gold);
     }
   </style>
 
@@ -887,7 +883,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
       <div class="zb-mod"><div class="zb-mod-header" onclick="zbToggle(this)"><div class="zb-mod-num">7</div><div class="zb-mod-title">7. modul — diagnostika v praxi</div><div class="zb-mod-count">5 lekcí</div><span class="zb-mod-arrow">›</span></div><div class="zb-mod-body"><ul class="zb-lessons"><li>Diagnostika všemi barvami najednou</li><li>Témata pro diagnostiku a jak na to</li><li>Co, kdy mohu diagnostikovat</li><li>Kdy a jak pomáhat druhým</li><li>Co dělat, když si nejsem jistá</li></ul></div></div>
     </div>
     <p class="zb-p" style="text-align:center;margin-top:2rem;">Každý modul obsahuje krátké videolekce, praktické ukázky i jednoduché úkoly, díky kterým nové poznatky rovnou převádíš do svého života.</p>
-    <p style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:#1A1A1A;text-align:center;margin-top:1rem;">Kurz průběžně rozšiřuji a aktualizuji o nové poznatky i zkušenosti z praxe.</p>
+    <p style="font-family:'Inter',sans-serif;font-weight:700;font-size:16px;color:var(--text);text-align:center;margin-top:1rem;">Kurz průběžně rozšiřuji a aktualizuji o nové poznatky i zkušenosti z praxe.</p>
   </div>
 
   <div class="zb-gold-bar"></div>
@@ -900,7 +896,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
       <div class="zb-card"><div class="zb-card-icon">💬</div><div class="zb-card-title">WhatsApp skupina</div><div class="zb-card-text">Sdílení, dotazy i praktická výuka kresby po celou dobu kurzu. Nejsi na nic sama.</div></div>
       <div class="zb-card"><div class="zb-card-icon">🎥</div><div class="zb-card-title">Společný Zoom</div><div class="zb-card-text">Úvodní aktivace jednotlivých kroků s Hankou osobně na začátku kurzu.</div></div>
     </div>
-    <p class="zb-p" style="margin-top:2rem;font-style:italic;color:#888">Mým cílem je, aby ses naučila důvěřovat svému vnímání, rozumět své energii a nacházet odpovědi uvnitř sebe.</p>
+    <p class="zb-p" style="margin-top:2rem;font-style:italic;color:var(--text-muted)">Mým cílem je, aby ses naučila důvěřovat svému vnímání, rozumět své energii a nacházet odpovědi uvnitř sebe.</p>
   </div>
 
   <div class="zb-gold-bar"></div>
@@ -908,15 +904,15 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
   <div class="zb-sec">
     <div class="zb-label">O autorce metody AKD</div>
     <h2 class="zb-h2">Kdo stojí za metodou AKD?</h2>
-    <div style="background:#FDFAF5;border:1px solid #EDE8DF;border-radius:20px;padding:2rem;">
+    <div style="background:var(--cream);border:1px solid var(--divider);border-radius: 0;padding:2rem;">
       <div style="display:grid;grid-template-columns:1fr 160px;gap:2rem;align-items:start;">
         <div>
-          <div style="font-family:Cormorant Garamond,serif;font-size:24px;font-weight:600;margin-bottom:0.25rem;color:#1A1A1A;">Jarka Matušková</div>
-          <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;margin-bottom:1rem;font-family:Montserrat,sans-serif;">Autorka metody JIH® · Průvodkyně vědomým životem</div>
-          <p style="font-size:14px;line-height:1.85;color:#5A5A5A;font-family:Montserrat,sans-serif;margin-bottom:1.25rem;">Autorka metody JIH® a zakladatelka automatické kresby diagnostické (od roku 2011). Více než 10 let pomáhá lidem pracovat s jejich energií a vnitřním nastavením.</p>
-          <div style="border-left:3px solid #C9A84C;padding-left:1rem;font-size:14px;font-style:italic;color:#5A5A5A;font-family:Montserrat,sans-serif;line-height:1.85;">Automatická kresba diagnostická pomáhá lidem již od roku 2011. Dala jsem si tu práci předávat vše, co já sama používám pro svůj vlastní rozvoj a pro zlepšení života všech ostatních. Jsem nadšená z toho, že další lidé nemusí sebou dál tahat to, co jim v jejich životech nevyhovuje.</div>
+          <div style="font-family:Fraunces,serif;font-size:24px;font-weight:600;margin-bottom:0.25rem;color:var(--text);">Jarka Matušková</div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-family:Inter,sans-serif;">Autorka metody JIH® · Průvodkyně vědomým životem</div>
+          <p style="font-size:14px;line-height:1.85;color:var(--text-muted);font-family:Inter,sans-serif;margin-bottom:1.25rem;">Autorka metody JIH® a zakladatelka automatické kresby diagnostické (od roku 2011). Více než 10 let pomáhá lidem pracovat s jejich energií a vnitřním nastavením.</p>
+          <div style="border-left:3px solid var(--gold);padding-left:1rem;font-size:14px;font-style:italic;color:var(--text-muted);font-family:Inter,sans-serif;line-height:1.85;">Automatická kresba diagnostická pomáhá lidem již od roku 2011. Dala jsem si tu práci předávat vše, co já sama používám pro svůj vlastní rozvoj a pro zlepšení života všech ostatních. Jsem nadšená z toho, že další lidé nemusí sebou dál tahat to, co jim v jejich životech nevyhovuje.</div>
         </div>
-        <div style="min-width:220px;max-width:220px;border-radius:16px;overflow:hidden;border:1.5px solid #EDE8DF;">
+        <div style="min-width:220px;max-width:220px;border-radius: 0;overflow:hidden;border:1px solid var(--divider);">
           <img src="/images/jarka-matuzkova.png" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;min-height:280px;">
         </div>
       </div>
@@ -1023,21 +1019,21 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
 
   <style>
     .zb-ref-inner{ max-width:1120px; margin:0 auto; }
-    .zb-ref-divider{ width:64px; height:2px; background:#C9A84C; margin:1.25rem auto 3rem; border-radius:2px; }
+    .zb-ref-divider{ width:64px; height:2px; background:var(--gold); margin:1.25rem auto 3rem; border-radius:2px; }
     .zb-ref-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:28px; text-align:left; }
     @media (max-width:760px){ .zb-ref-grid{ grid-template-columns:1fr; } }
-    .zb-ref-card{ position:relative; background:#FCFAF6; border:1px solid rgba(201,168,76,0.25); border-radius:20px; padding:32px 28px 26px; box-shadow:0 4px 18px rgba(26,26,26,0.05); display:flex; flex-direction:column; transition:box-shadow .25s ease, transform .25s ease; }
-    .zb-ref-card:hover{ box-shadow:0 10px 28px rgba(201,168,76,0.18); transform:translateY(-3px); }
-    .zb-ref-quotemark{ position:absolute; top:8px; right:24px; font-family:'Cormorant Garamond', serif; font-size:88px; line-height:1; color:#F5D5C8; font-weight:600; pointer-events:none; user-select:none; }
+    .zb-ref-card{ position:relative; background:var(--cream); border:1px solid var(--divider); border-radius: 0; padding:32px 28px 26px; display:flex; flex-direction:column; transition:border-color 0.2s ease; }
+    .zb-ref-card:hover{ border-color:var(--gold); }
+    .zb-ref-quotemark{ position:absolute; top:8px; right:24px; font-family:'Fraunces', serif; font-size:88px; line-height:1; color:var(--peach); font-weight:600; pointer-events:none; user-select:none; }
     .zb-ref-head{ display:flex; align-items:center; gap:14px; margin-bottom:16px; z-index:1; }
     .zb-ref-avatar{ width:72px; height:72px; border-radius:50%; display:block; flex-shrink:0; object-fit:cover; }
-    .zb-ref-name{ font-family:'Montserrat', sans-serif; font-weight:700; font-size:16px; color:#1A1A1A; margin:0; }
-    .zb-ref-role{ font-family:'Montserrat', sans-serif; font-size:12.5px; color:#8a8a8a; margin:2px 0 0; }
-    .zb-ref-quote{ font-family:'Montserrat', sans-serif; font-size:15px; line-height:1.7; color:#3a3a3a; margin:0; position:relative; z-index:1; }
+    .zb-ref-name{ font-family:'Inter', sans-serif; font-weight:700; font-size:16px; color:var(--text); margin:0; }
+    .zb-ref-role{ font-family:'Inter', sans-serif; font-size:12.5px; color:var(--text-muted); margin:2px 0 0; }
+    .zb-ref-quote{ font-family:'Inter', sans-serif; font-size:15px; line-height:1.7; color:var(--text); margin:0; position:relative; z-index:1; }
     .zb-ref-quote-more{ display:none; }
     .zb-ref-card.is-open .zb-ref-quote-more{ display:inline; }
-    .zb-ref-toggle{ margin-top:14px; align-self:flex-start; background:none; border:none; font-family:'Montserrat', sans-serif; font-weight:600; font-size:13px; color:#C9A84C; cursor:pointer; padding:0; display:flex; align-items:center; gap:6px; z-index:1; }
-    .zb-ref-toggle:hover{ color:#a9873a; }
+    .zb-ref-toggle{ margin-top:14px; align-self:flex-start; background:none; border:none; font-family:'Inter', sans-serif; font-weight:600; font-size:13px; color:var(--gold); cursor:pointer; padding:0; display:flex; align-items:center; gap:6px; z-index:1; }
+    .zb-ref-toggle:hover{ color:var(--gold-dark); }
     .zb-ref-toggle-arrow{ display:inline-block; transition:transform .2s ease; font-size:11px; }
     .zb-ref-card.is-open .zb-ref-toggle-arrow{ transform:rotate(180deg); }
   </style>
@@ -1115,7 +1111,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
             <span class="zb-faq-icon">+</span>
           </button>
           <div class="zb-faq-a">
-            <p class="zb-p">Ke kurzu získáváš přístup na 3 měsíce. To je dostatek času projít všechny moduly, opakovat si jednotlivé části a vracet se k nim podle potřeby. Nemusíš mít obavy, že vše musíš zvládnout během několika dnů.</p>
+            <p class="zb-p">Ke kurzu získáváš přístup na 2 roky, takže máš dostatek času projít všechny moduly, opakovat si jednotlivé části a vracet se k nim podle potřeby &ndash; nemusíš mít obavy, že vše musíš zvládnout během několika dnů. Moji osobní podporu (zpětná vazba ke kresbám, Zoom setkání) pak máš k dispozici po dobu, která odpovídá zvolené variantě &ndash; u AKD Standard se ti věnuji intenzivně první měsíc a ve druhém měsíci mi ještě můžeš posílat kresby ke zpětné vazbě, u AKD s osobním vedením po dobu tří měsíců.</p>
           </div>
         </div>
 
@@ -1200,14 +1196,14 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
     .zb-faq-wrap{ max-width:760px; margin:0 auto; }
     .zb-faq-list{ margin-top:2rem; }
     .zb-faq-item{
-      border-top:1px solid rgba(201,168,76,0.35);
-      border-radius:10px;
+      border-top:1px solid var(--gold);
+      border-radius: 0;
       transition:background 0.25s ease;
     }
-    .zb-faq-item:last-child{ border-bottom:1px solid rgba(201,168,76,0.35); }
+    .zb-faq-item:last-child{ border-bottom:1px solid var(--gold); }
     .zb-faq-item.open{
-      background:#FCFAF6;
-      border-top-color:rgba(201,168,76,0.6);
+      background:var(--cream);
+      border-top-color:var(--gold-dark);
     }
     .zb-faq-q{
       width:100%;
@@ -1220,27 +1216,27 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
       text-align:left;
       cursor:pointer;
       padding:1.35rem 1.25rem;
-      font-family:'Montserrat', sans-serif;
+      font-family:'Inter', sans-serif;
       font-size:15px;
       font-weight:700;
-      color:#C9A84C;
+      color:var(--gold);
       transition:color 0.2s;
     }
-    .zb-faq-q:hover{ color:#a9873a; }
-    .zb-faq-item.open .zb-faq-q{ color:#a9873a; }
+    .zb-faq-q:hover{ color:var(--gold-dark); }
+    .zb-faq-item.open .zb-faq-q{ color:var(--gold-dark); }
     .zb-faq-q > span:nth-of-type(2){ flex:1; }
     .zb-faq-num{
-      width:32px; height:32px; border-radius:8px;
-      background:linear-gradient(135deg, #F5EDD5, #EDD98A);
+      width:32px; height:32px; border-radius:50%;
+      background:var(--peach);
       display:flex; align-items:center; justify-content:center;
-      font-size:13px; font-weight:700; color:#8B6A1A; flex-shrink:0;
-      font-family:'Montserrat', sans-serif;
+      font-size:13px; font-weight:700; color:var(--gold-dark); flex-shrink:0;
+      font-family:'Inter', sans-serif;
     }
     .zb-faq-icon{
       flex-shrink:0;
       font-size:20px;
       font-weight:400;
-      color:#C9A84C;
+      color:var(--gold);
       transition:transform 0.25s ease;
       line-height:1;
     }
@@ -1248,7 +1244,7 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
     .zb-faq-a{
       display:none;
       padding:0 1.75rem 1.5rem 1.25rem;
-      border-left:3px solid #C9A84C;
+      border-left:3px solid var(--gold);
       margin:0 1.25rem 1.25rem;
     }
     .zb-faq-item.open .zb-faq-a{ display:block; }
@@ -1270,10 +1266,21 @@ li, ul, ol { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #5A5
   
   <div class="zb-cta" id="zb-cta">
     <div class="zb-label" style="text-align:center">Investice do sebe</div>
-    <div class="zb-price">6 790 Kč</div>
-    <div class="zb-price-sub">vč. DPH</div>
-    <a href="FLIXY_ODKAZ_SEM" class="zb-cta-btn">Chci se zapsat do kurzu</a>
-    <p class="zb-guarantee">✓ Přístup získáš ihned po zaplacení &nbsp;·&nbsp; ✓ Přístup na 3 měsíce</p>
+    <div class="zb-cta-grid">
+      <div class="zb-cta-card">
+        <h3 class="zb-cta-card-title">🌿 AKD Standard</h3>
+        <div class="zb-price">7 900 Kč</div>
+        <div class="zb-price-sub">vč. DPH</div>
+        <a href="https://hanka-mokra.cz/p/akd-standard" class="zb-cta-btn">Chci se zapsat do kurzu</a>
+      </div>
+      <div class="zb-cta-card">
+        <h3 class="zb-cta-card-title">🌸 AKD s osobním vedením</h3>
+        <div class="zb-price">23 700 Kč</div>
+        <div class="zb-price-sub">vč. DPH</div>
+        <a href="https://hanka-mokra.cz/p/akd-osobni-vedeni" class="zb-cta-btn">Chci se zapsat do kurzu</a>
+      </div>
+    </div>
+    <p class="zb-guarantee">✓ Přístup získáš ihned po zaplacení &nbsp;·&nbsp; ✓ Přístup na 2 roky</p>
   </div>
 
   

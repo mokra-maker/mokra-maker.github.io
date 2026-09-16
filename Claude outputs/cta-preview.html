@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Náhled CTA</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif; color: #1A1A1A; background:#fff; }
+.zb-cta { text-align: center; padding: 4rem 2.5rem; background: #FDFBF7; }
+.zb-label { font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A84C; margin-bottom: 0.75rem; font-family: 'Montserrat', sans-serif; }
+.zb-price { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 600; color: #C9A84C; line-height: 1; margin-bottom: 0.5rem; }
+.zb-price-sub { font-size: 13px; color: #888; margin-bottom: 2rem; letter-spacing: 0.05em; }
+.zb-cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #C9A84C, #E8D07A, #C9A84C);
+  color: #fff; font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 1.1rem 3.5rem; border-radius: 50px;
+  text-decoration: none; text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+}
+.zb-guarantee { font-size: 12px; color: #888; margin-top: 1.25rem; letter-spacing: 0.04em; }
+.zb-cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; max-width: 900px; margin: 2rem auto 0; text-align: center; }
+.zb-cta-card { background: #fff; border: 2px solid #C9A84C; border-radius: 20px; padding: 2.25rem 1.75rem 2rem; box-shadow: 0 4px 18px rgba(26,26,26,0.06); }
+.zb-cta-card-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #1A1A1A; margin-bottom: 1rem; }
+.zb-cta-card .zb-price { font-size: 42px; margin-bottom: 0.4rem; }
+.zb-cta-card .zb-price-sub { margin-bottom: 1.5rem; }
+@media (max-width: 600px) {
+  .zb-cta-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+  <div class="zb-cta" id="zb-cta">
+    <div class="zb-label" style="text-align:center">Investice do sebe</div>
+    <div class="zb-cta-grid">
+      <div class="zb-cta-card">
+        <h3 class="zb-cta-card-title">🌿 AKD Standard</h3>
+        <div class="zb-price">6 790 Kč</div>
+        <div class="zb-price-sub">vč. DPH</div>
+        <a href="#" class="zb-cta-btn">Chci se zapsat do kurzu</a>
+      </div>
+      <div class="zb-cta-card">
+        <h3 class="zb-cta-card-title">🌸 AKD s osobním vedením</h3>
+        <div class="zb-price">6 790 Kč</div>
+        <div class="zb-price-sub">vč. DPH</div>
+        <a href="#" class="zb-cta-btn">Chci se zapsat do kurzu</a>
+      </div>
+    </div>
+    <p class="zb-guarantee">✓ Přístup získáš ihned po zaplacení &nbsp;·&nbsp; ✓ Přístup na 3 měsíce</p>
+  </div>
+
+</body>
+</html>

@@ -3,8 +3,8 @@
   --cream: #FBF7F2;
   --peach: #F8E1D7;
   --peach-light: #FCEEE6;
-  --gold: #B8874C;
-  --gold-dark: #9C6F3A;
+  --gold: #CBA135;
+  --gold-dark: #A9832A;
   --text: #2E2A24;
   --text-muted: #6E6558;
   --divider: #EDDCCB;
@@ -161,7 +161,7 @@ section:not(:first-of-type) {
   border-top: 1px solid var(--divider);
 }
 
-section.alt { background: var(--cream); }
+section.alt { background: var(--white); }
 
 .section-label {
   display: flex;
