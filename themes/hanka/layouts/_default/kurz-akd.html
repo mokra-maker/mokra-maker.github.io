@@ -187,6 +187,9 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
 .zb-cta-card-title { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 1rem; }
 .zb-cta-card .zb-price { font-size: 42px; margin-bottom: 0.4rem; }
 .zb-cta-card .zb-price-sub { margin-bottom: 1.5rem; }
+.zb-cta-recap { list-style: none; margin: 0 0 1.5rem; padding: 0; text-align: left; display: inline-block; }
+.zb-cta-recap li { position: relative; padding: 0.25rem 0 0.25rem 1.4rem; font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+.zb-cta-recap li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
 
 /* ZÁVĚR */
 .zb-closing { text-align: center; padding: 3rem 2.5rem; background: #fff; }
@@ -1246,12 +1249,22 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
         <h3 class="zb-cta-card-title">🌿 AKD Standard</h3>
         <div class="zb-price">7 900 Kč</div>
         <div class="zb-price-sub">vč. DPH</div>
+        <ul class="zb-cta-recap">
+          <li>Kompletní online kurz i materiály</li>
+          <li>Přístup ke kurzu na 2 roky</li>
+          <li>Podpora: 1. měsíc intenzivně, 2. měsíc zpětná vazba ke kresbám</li>
+        </ul>
         <a href="https://hanka-mokra.cz/p/akd-standard" class="zb-cta-btn">Chci se zapsat do kurzu</a>
       </div>
       <div class="zb-cta-card">
         <h3 class="zb-cta-card-title">🌸 AKD s osobním vedením</h3>
         <div class="zb-price">23 700 Kč</div>
         <div class="zb-price-sub">vč. DPH</div>
+        <ul class="zb-cta-recap">
+          <li>Vše ze Standardu a navíc</li>
+          <li>Přístup do členské sekce na 2 roky</li>
+          <li>Osobní vedení po dobu 3 měsíců (WhatsApp + Zoom)</li>
+        </ul>
         <a href="https://hanka-mokra.cz/p/akd-osobni-vedeni" class="zb-cta-btn">Chci se zapsat do kurzu</a>
       </div>
     </div>
