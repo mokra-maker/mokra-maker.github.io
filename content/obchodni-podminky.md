@@ -47,7 +47,7 @@ Platbu provádí kupující jednorázově prostřednictvím platební brány tř
 
 ## 5. Dodání a zpřístupnění kurzu
 
-Přístup do online členské sekce s materiály kurzu zpřístupní prodávající kupujícímu bez zbytečného odkladu po přijetí platby, nejpozději však do 5 pracovních dnů, nedohodnou-li se strany jinak (např. v návaznosti na termín nejbližšího úvodního setkání).
+Po přijetí platby zašle prodávající kupujícímu bez zbytečného odkladu e-mail s potvrzením platby a informacemi k nejbližšímu úvodnímu společnému setkání (úvodní Zoom). Přístup do online členské sekce s materiály kurzu zpřístupní prodávající kupujícímu po tomto úvodním setkání, v rámci kterého je kupujícímu zároveň vysvětlen průběh celého kurzu, nejpozději však do 14 dnů od přijetí platby, nedohodnou-li se strany jinak.
 
 Přístup do členské sekce zůstává kupujícímu zachován po dobu trvání kurzu a dále po dobu uvedenou u dané varianty kurzu na prodejní stránce (aktuálně 2 roky od ukončení kurzu).
 
