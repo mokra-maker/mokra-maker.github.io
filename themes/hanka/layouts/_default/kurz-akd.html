@@ -1250,6 +1250,75 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
 
   <!-- ==================== /SEKCE: FAQ ==================== -->
 
+  <!-- MATERIÁLY KURZU -->
+  <style>
+    .zb-mat-hero{ display:flex; align-items:flex-end; justify-content:center; flex-wrap:wrap; padding:2.5rem 1rem 3.5rem; }
+    .zb-mat-hero-card{ width:150px; margin:0 -14px 1.5rem; background:#fff; border:1px solid var(--divider); transform: rotate(var(--r)) translateY(var(--y)); transition: transform 0.25s ease; }
+    .zb-mat-hero-card img{ display:block; width:100%; height:auto; }
+    .zb-mat-hero-card:hover{ transform: rotate(0deg) translateY(-10px); z-index:9 !important; }
+    .zb-mat-hero-main{ width:190px; }
+    .zb-mat-hero-wide{ width:210px; }
+    .zb-mat-mosaic{ display:grid; grid-template-columns:repeat(5,1fr); aspect-ratio:3/4; overflow:hidden; }
+    .zb-mat-mosaic img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .zb-mat-mosaic-2{ grid-template-columns:repeat(2,1fr); }
+    @media (max-width:640px){
+      .zb-mat-hero-card{ width:100px; margin:0 -10px 1.5rem; }
+      .zb-mat-hero-main{ width:130px; }
+      .zb-mat-hero-wide{ width:140px; }
+    }
+  </style>
+  <div class="zb-sec">
+    <div class="zb-label" style="text-align:center">Co všechno v kurzu získáváš</div>
+    <h2 class="zb-h2" style="text-align:center;max-width:720px;margin-left:auto;margin-right:auto;">Víc než jen videa</h2>
+    <p class="zb-p" style="text-align:center;max-width:620px;margin:0 auto 1rem;">Kromě videolekcí, každotýdenního Zoomu a konzultací máš k dispozici i 73 stran psaných skript, taháků a pracovních listů &ndash; aby bylo objevování AKD a tvého vlastního vnímání snadné, srozumitelné a po ruce, kdykoliv ho budeš potřebovat.</p>
+
+    <div class="zb-mat-hero">
+      <div class="zb-mat-hero-card" style="--r:-7deg; --y:18px; z-index:1;"><img src="/images/akd-vety-obalka.jpg" alt="Věty metody JIH® – zkracovače"></div>
+      <div class="zb-mat-hero-card" style="--r:-3deg; --y:-6px; z-index:2;"><img src="/images/akd-tahak-postup.jpg" alt="Tahák AKD – postup krok za krokem"></div>
+      <div class="zb-mat-hero-card zb-mat-hero-main" style="--r:0deg; --y:-16px; z-index:4;"><img src="/images/akd-skripta-obalka.jpg" alt="Studijní skripta Automatické kresby diagnostické metodou JIH®"></div>
+      <div class="zb-mat-hero-card" style="--r:4deg; --y:-4px; z-index:3;"><img src="/images/akd-otazky-obalka.jpg" alt="Otázky metody JIH®"></div>
+      <div class="zb-mat-hero-card zb-mat-hero-wide" style="--r:7deg; --y:20px; z-index:1;"><img src="/images/akd-casova-osa.jpg" alt="Časová osa AKD – prvotní příčiny"></div>
+    </div>
+
+    <div class="zb-cards3">
+      <div class="zb-card-img">
+        <img src="/images/akd-skripta-obalka.jpg" alt="Skripta Automatické kresby diagnostické metodou JIH®" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
+        <div class="zb-card-body"><div class="zb-card-title">Skripta AKD metodou JIH®</div><div class="zb-card-text">Kompletní studijní skripta, která tě podrží krok za krokem celým kurzem.</div></div>
+      </div>
+      <div class="zb-card-img">
+        <img src="/images/akd-otazky-obalka.jpg" alt="Otázky metody JIH®" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
+        <div class="zb-card-body"><div class="zb-card-title">Otázky metody JIH®</div><div class="zb-card-text">Praktický průvodce nejčastějšími otázkami k práci s AKD metodou JIH®.</div></div>
+      </div>
+      <div class="zb-card-img">
+        <div class="zb-mat-mosaic">
+          <img src="/images/akd-barva-cervena.jpg" alt="Barva červená">
+          <img src="/images/akd-barva-oranzova.jpg" alt="Barva oranžová">
+          <img src="/images/akd-barva-zluta.jpg" alt="Barva žlutá">
+          <img src="/images/akd-barva-zelena.jpg" alt="Barva zelená">
+          <img src="/images/akd-barva-modra.jpg" alt="Barva modrá">
+        </div>
+        <div class="zb-card-body"><div class="zb-card-title">Pomocná skripta barev AKD</div><div class="zb-card-text">Průvodce všemi pěti barvami diagnostiky &ndash; co znamenají a jak je číst.</div></div>
+      </div>
+      <div class="zb-card-img">
+        <img src="/images/akd-vety-obalka.jpg" alt="Věty metody JIH® – zkracovače" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
+        <div class="zb-card-body"><div class="zb-card-title">Věty metody JIH® &ndash; zkracovače</div><div class="zb-card-text">Jednoduché věty, které tě vrací do vnitřního klidu a vědomého tvoření.</div></div>
+      </div>
+      <div class="zb-card-img">
+        <div class="zb-mat-mosaic zb-mat-mosaic-2">
+          <img src="/images/akd-tahak-postup.jpg" alt="Tahák AKD – postup krok za krokem">
+          <img src="/images/akd-tahak-diagnostiky.jpg" alt="Tahák diagnostiky – otázky metody JIH®">
+        </div>
+        <div class="zb-card-body"><div class="zb-card-title">Taháky</div><div class="zb-card-text">Rychlá orientace v postupu i v otázkách diagnostiky, po ruce při každé praxi.</div></div>
+      </div>
+      <div class="zb-card-img">
+        <img src="/images/akd-casova-osa.jpg" alt="Časová osa AKD – prvotní příčiny" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center;border-radius:0;display:block;">
+        <div class="zb-card-body"><div class="zb-card-title">Časová osa AKD</div><div class="zb-card-text">Orientace v časové linii prvotních příčin pro hlubší diagnostiku.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
   <!-- CTA -->
   <div class="zb-cta" id="zb-cta">
     <div class="zb-label" style="text-align:center">Investice do sebe</div>
