@@ -293,7 +293,7 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
   <div class="zb-sec">
     <div class="zb-label">Přínosy</div>
     <h2 class="zb-h2">Co se začne měnit?</h2>
-    <div class="zb-cards2" style="grid-template-columns:repeat(3,1fr)">
+    <div class="zb-cards3">
       <div class="zb-card"><div class="zb-card-icon">☾</div><div class="zb-card-title">Klid místo neustálého hledání</div><div class="zb-card-text">Přestaneš mít pocit, že odpovědi musíš hledat všude kolem sebe. Začneš je nacházet uvnitř sebe.</div></div>
       <div class="zb-card"><div class="zb-card-icon">◇</div><div class="zb-card-title">Důvěra ve vlastní vnímání</div><div class="zb-card-text">Postupně přestaneš pochybovat o tom, co cítíš. Začneš více důvěřovat svému vnímání.</div></div>
       <div class="zb-card"><div class="zb-card-icon">✿</div><div class="zb-card-title">Větší svoboda v každodenním životě</div><div class="zb-card-text">To, co objevíš během kurzu, začne přirozeně měnit tvá rozhodnutí, vztahy i každodenní prožívání.</div></div>
@@ -303,12 +303,20 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
   <div class="zb-gold-bar"></div>
 
   <!-- PRŮVODKYNĚ -->
+  <style>
+    .zb-guide-box{ display:grid; grid-template-columns:380px 1fr; gap:0; align-items:stretch; margin-bottom:2.5rem; background:#fff; border-radius:0; border:1px solid var(--divider); overflow:hidden; }
+    .zb-guide-photo{ min-height:340px; overflow:hidden; }
+    @media (max-width:640px){
+      .zb-guide-box{ grid-template-columns:1fr; }
+      .zb-guide-photo{ min-height:260px; }
+    }
+  </style>
   <div class="zb-sec-warm">
     <div class="zb-label">Kdo tě touto cestou provede</div>
     <h2 class="zb-h2">Touto cestou tě provedu osobně.</h2>
 
-    <div style="display:grid;grid-template-columns:380px 1fr;gap:0;align-items:stretch;margin-bottom:2.5rem;background:#fff;border-radius: 0;border:1px solid var(--divider);overflow:hidden;">
-      <div style="min-height:340px;overflow:hidden;">
+    <div class="zb-guide-box">
+      <div class="zb-guide-photo">
         <img src="/images/hanka-pruvodkyne.png" style="width:100%;height:100%;object-fit:cover;object-position:center 10%;display:block;">
       </div>
       <div style="padding:2.5rem 2rem;">
@@ -1256,6 +1264,10 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
           </button>
           <div class="zb-faq-a">
             <p class="zb-p">Ano. Pokud by pro tebe byla jednorázová platba překážkou, napiš mi a společně najdeme vhodné řešení.</p>
+            <p class="zb-p" style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+              <a href="https://wa.me/420775282229?text=Dobr%C3%BD%20den%2C%20m%C3%A1m%20z%C3%A1jem%20o%20kurz%20AKD%20a%20cht%C4%9Bla%20bych%20se%20zeptat%20na%20mo%C5%BEnost%20platby%20na%20spl%C3%A1tky." target="_blank" rel="noopener" style="color:var(--gold);font-weight:700;text-decoration:none;">Napsat na WhatsApp →</a>
+              <a href="mailto:mokra@freli.cz?subject=Dotaz%20na%20spl%C3%A1tky%20%E2%80%93%20kurz%20AKD" style="color:var(--gold);font-weight:700;text-decoration:none;">Napsat e-mailem →</a>
+            </p>
           </div>
         </div>
 
