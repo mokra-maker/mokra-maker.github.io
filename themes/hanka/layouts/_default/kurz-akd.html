@@ -934,6 +934,111 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
 
   <div class="zb-gold-bar"></div>
 
+  <!-- MATERIÁLY KURZU -->
+  <style>
+    .zb-mat-hero{ display:flex; align-items:flex-end; justify-content:center; flex-wrap:wrap; padding:2.5rem 1rem 3.5rem; }
+    .zb-mat-hero-card{ width:150px; margin:0 -14px 1.5rem; background:#fff; border:1px solid var(--divider); transform: rotate(var(--r)) translateY(var(--y)); transition: transform 0.25s ease; }
+    .zb-mat-hero-card img{ display:block; width:100%; height:auto; }
+    .zb-mat-hero-card:hover{ transform: rotate(0deg) translateY(-10px); z-index:9 !important; }
+    .zb-mat-hero-main{ width:190px; }
+    .zb-mat-hero-wide{ width:210px; }
+    .zb-mat-mosaic{ display:grid; grid-template-columns:repeat(5,1fr); aspect-ratio:3/4; overflow:hidden; }
+    .zb-mat-mosaic img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .zb-mat-mosaic-2{ grid-template-columns:repeat(2,1fr); }
+    .zb-mat-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:0.9rem; margin-top:1rem; }
+    .zb-mat-grid .zb-card-title{ font-size:13px; }
+    .zb-mat-grid .zb-card-text{ font-size:12px; line-height:1.5; }
+    .zb-mat-grid .zb-card-body{ padding:0.85rem 0.85rem 1.1rem; }
+    @media (max-width:900px){
+      .zb-mat-grid{ grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+      .zb-mat-grid .zb-card-title{ font-size:15px; }
+      .zb-mat-grid .zb-card-text{ font-size:13px; }
+    }
+    @media (max-width:640px){
+      .zb-mat-hero-card{ width:100px; margin:0 -10px 1.5rem; }
+      .zb-mat-hero-main{ width:130px; }
+      .zb-mat-hero-wide{ width:140px; }
+      .zb-mat-grid{ grid-template-columns:repeat(2,1fr); }
+    }
+  </style>
+  <div class="zb-sec">
+    <div class="zb-label" style="text-align:center">Co všechno v kurzu získáváš</div>
+    <h2 class="zb-h2" style="text-align:center;max-width:720px;margin-left:auto;margin-right:auto;">Víc než jen videa</h2>
+    <p class="zb-p" style="text-align:center;max-width:620px;margin:0 auto 1rem;">Kromě videolekcí, každotýdenního Zoomu a konzultací máš k dispozici i 73 stran psaných skript, taháků a pracovních listů &ndash; aby bylo objevování AKD a tvého vlastního vnímání snadné, srozumitelné a po ruce, kdykoliv ho budeš potřebovat.</p>
+
+    <div class="zb-mat-hero">
+      <div class="zb-mat-hero-card" style="--r:-7deg; --y:18px; z-index:1;"><img src="/images/akd-vety-obalka.jpg" alt="Věty metody JIH® – zkracovače"></div>
+      <div class="zb-mat-hero-card" style="--r:-3deg; --y:-6px; z-index:2;"><img src="/images/akd-tahak-postup.jpg" alt="Tahák AKD – postup krok za krokem"></div>
+      <div class="zb-mat-hero-card zb-mat-hero-main" style="--r:0deg; --y:-16px; z-index:4;"><img src="/images/akd-skripta-obalka.jpg" alt="Studijní skripta Automatické kresby diagnostické metodou JIH®"></div>
+      <div class="zb-mat-hero-card" style="--r:4deg; --y:-4px; z-index:3;"><img src="/images/akd-otazky-obalka.jpg" alt="Otázky metody JIH®"></div>
+      <div class="zb-mat-hero-card zb-mat-hero-wide" style="--r:7deg; --y:20px; z-index:1;"><img src="/images/akd-casova-osa.jpg" alt="Časová osa AKD – prvotní příčiny"></div>
+    </div>
+
+    <div class="zb-mat-grid">
+      <div class="zb-card-img">
+        <img src="/images/akd-skripta-obalka.jpg" alt="Skripta Automatické kresby diagnostické metodou JIH®" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
+        <div class="zb-card-body"><div class="zb-card-title">Skripta AKD metodou JIH®</div><div class="zb-card-text">Kompletní studijní skripta, která tě podrží krok za krokem celým kurzem.</div></div>
+      </div>
+      <div class="zb-card-img">
+        <img src="/images/akd-otazky-obalka.jpg" alt="Otázky metody JIH®" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
+        <div class="zb-card-body"><div class="zb-card-title">Otázky metody JIH®</div><div class="zb-card-text">Praktický průvodce nejčastějšími otázkami k práci s AKD metodou JIH®.</div></div>
+      </div>
+      <div class="zb-card-img">
+        <div class="zb-mat-mosaic">
+          <img src="/images/akd-barva-cervena-swatch.jpg" alt="Barva červená">
+          <img src="/images/akd-barva-oranzova-swatch.jpg" alt="Barva oranžová">
+          <img src="/images/akd-barva-zluta-swatch.jpg" alt="Barva žlutá">
+          <img src="/images/akd-barva-zelena-swatch.jpg" alt="Barva zelená">
+          <img src="/images/akd-barva-modra-swatch.jpg" alt="Barva modrá">
+        </div>
+        <div class="zb-card-body"><div class="zb-card-title">Pomocná skripta barev AKD</div><div class="zb-card-text">Průvodce všemi pěti barvami diagnostiky &ndash; co znamenají a jak je číst.</div></div>
+      </div>
+      <div class="zb-card-img">
+        <img src="/images/akd-vety-obalka.jpg" alt="Věty metody JIH® – zkracovače" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
+        <div class="zb-card-body"><div class="zb-card-title">Věty metody JIH® &ndash; zkracovače</div><div class="zb-card-text">Jednoduché věty, které tě vrací do vnitřního klidu a vědomého tvoření.</div></div>
+      </div>
+      <div class="zb-card-img">
+        <img src="/images/akd-casova-osa.jpg" alt="Časová osa AKD – prvotní příčiny" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center;border-radius:0;display:block;">
+        <div class="zb-card-body"><div class="zb-card-title">Časová osa AKD</div><div class="zb-card-text">Orientace v časové linii prvotních příčin pro hlubší diagnostiku.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
+  <!-- CTA -->
+  <div class="zb-cta" id="zb-cta">
+    <div class="zb-label" style="text-align:center">Investice do sebe</div>
+    <div class="zb-cta-grid">
+      <div class="zb-cta-card">
+        <h3 class="zb-cta-card-title">🌿 AKD Standard</h3>
+        <div class="zb-price">18 900 Kč</div>
+        <div class="zb-price-sub">za 3 měsíce &middot; tj. 6 300 Kč měsíčně &middot; nejsem plátce DPH</div>
+        <ul class="zb-cta-recap">
+          <li>Kompletní online kurz i materiály</li>
+          <li>Každotýdenní Zoom + 2 konzultace v ceně</li>
+          <li>Přístup 2 roky po skončení kurzu</li>
+        </ul>
+        <a href="https://form.fapi.cz/?id=2658bd27-9dfa-432c-ade7-494d1bfb304f" class="zb-cta-btn">Chci se zapsat do kurzu</a>
+      </div>
+      <div class="zb-cta-card">
+        <h3 class="zb-cta-card-title">🌸 AKD s osobním vedením</h3>
+        <div class="zb-price">24 900 Kč</div>
+        <div class="zb-price-sub">za 3 měsíce &middot; tj. 8 300 Kč měsíčně &middot; nejsem plátce DPH</div>
+        <ul class="zb-cta-recap">
+          <li>Vše ze Standardu, jen osobněji a rychleji</li>
+          <li>Maximální individuální pozornost</li>
+          <li>Přístup 2 roky po skončení kurzu</li>
+        </ul>
+        <a href="https://form.fapi.cz/?id=22e0e7ff-4ec5-4ac2-8199-82576cd6938c" class="zb-cta-btn">Chci se zapsat do kurzu</a>
+      </div>
+    </div>
+    <p class="zb-guarantee">✓ Přístup získáš ihned po zaplacení &nbsp;·&nbsp; ✓ Materiály ti zůstanou k dispozici ještě 2 roky po skončení kurzu</p>
+    <p class="zb-guarantee" style="margin-top:0.5rem;">Odesláním objednávky souhlasíš s <a href="/obchodni-podminky/" style="color:var(--gold);">obchodními podmínkami</a> a <a href="/ochrana-osobnich-udaju/" style="color:var(--gold);">zpracováním osobních údajů</a>.</p>
+  </div>
+
+  <div class="zb-gold-bar"></div>
+
   <!-- ====================== SEKCE: REFERENCE ====================== -->
   <div class="zb-sec zb-ref-section" id="reference">
     <div class="zb-ref-inner">
@@ -1139,111 +1244,6 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
   <div class="zb-gold-bar"></div>
 
 
-
-  <!-- MATERIÁLY KURZU -->
-  <style>
-    .zb-mat-hero{ display:flex; align-items:flex-end; justify-content:center; flex-wrap:wrap; padding:2.5rem 1rem 3.5rem; }
-    .zb-mat-hero-card{ width:150px; margin:0 -14px 1.5rem; background:#fff; border:1px solid var(--divider); transform: rotate(var(--r)) translateY(var(--y)); transition: transform 0.25s ease; }
-    .zb-mat-hero-card img{ display:block; width:100%; height:auto; }
-    .zb-mat-hero-card:hover{ transform: rotate(0deg) translateY(-10px); z-index:9 !important; }
-    .zb-mat-hero-main{ width:190px; }
-    .zb-mat-hero-wide{ width:210px; }
-    .zb-mat-mosaic{ display:grid; grid-template-columns:repeat(5,1fr); aspect-ratio:3/4; overflow:hidden; }
-    .zb-mat-mosaic img{ width:100%; height:100%; object-fit:cover; display:block; }
-    .zb-mat-mosaic-2{ grid-template-columns:repeat(2,1fr); }
-    .zb-mat-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:0.9rem; margin-top:1rem; }
-    .zb-mat-grid .zb-card-title{ font-size:13px; }
-    .zb-mat-grid .zb-card-text{ font-size:12px; line-height:1.5; }
-    .zb-mat-grid .zb-card-body{ padding:0.85rem 0.85rem 1.1rem; }
-    @media (max-width:900px){
-      .zb-mat-grid{ grid-template-columns:repeat(3,1fr); gap:1.25rem; }
-      .zb-mat-grid .zb-card-title{ font-size:15px; }
-      .zb-mat-grid .zb-card-text{ font-size:13px; }
-    }
-    @media (max-width:640px){
-      .zb-mat-hero-card{ width:100px; margin:0 -10px 1.5rem; }
-      .zb-mat-hero-main{ width:130px; }
-      .zb-mat-hero-wide{ width:140px; }
-      .zb-mat-grid{ grid-template-columns:repeat(2,1fr); }
-    }
-  </style>
-  <div class="zb-sec">
-    <div class="zb-label" style="text-align:center">Co všechno v kurzu získáváš</div>
-    <h2 class="zb-h2" style="text-align:center;max-width:720px;margin-left:auto;margin-right:auto;">Víc než jen videa</h2>
-    <p class="zb-p" style="text-align:center;max-width:620px;margin:0 auto 1rem;">Kromě videolekcí, každotýdenního Zoomu a konzultací máš k dispozici i 73 stran psaných skript, taháků a pracovních listů &ndash; aby bylo objevování AKD a tvého vlastního vnímání snadné, srozumitelné a po ruce, kdykoliv ho budeš potřebovat.</p>
-
-    <div class="zb-mat-hero">
-      <div class="zb-mat-hero-card" style="--r:-7deg; --y:18px; z-index:1;"><img src="/images/akd-vety-obalka.jpg" alt="Věty metody JIH® – zkracovače"></div>
-      <div class="zb-mat-hero-card" style="--r:-3deg; --y:-6px; z-index:2;"><img src="/images/akd-tahak-postup.jpg" alt="Tahák AKD – postup krok za krokem"></div>
-      <div class="zb-mat-hero-card zb-mat-hero-main" style="--r:0deg; --y:-16px; z-index:4;"><img src="/images/akd-skripta-obalka.jpg" alt="Studijní skripta Automatické kresby diagnostické metodou JIH®"></div>
-      <div class="zb-mat-hero-card" style="--r:4deg; --y:-4px; z-index:3;"><img src="/images/akd-otazky-obalka.jpg" alt="Otázky metody JIH®"></div>
-      <div class="zb-mat-hero-card zb-mat-hero-wide" style="--r:7deg; --y:20px; z-index:1;"><img src="/images/akd-casova-osa.jpg" alt="Časová osa AKD – prvotní příčiny"></div>
-    </div>
-
-    <div class="zb-mat-grid">
-      <div class="zb-card-img">
-        <img src="/images/akd-skripta-obalka.jpg" alt="Skripta Automatické kresby diagnostické metodou JIH®" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
-        <div class="zb-card-body"><div class="zb-card-title">Skripta AKD metodou JIH®</div><div class="zb-card-text">Kompletní studijní skripta, která tě podrží krok za krokem celým kurzem.</div></div>
-      </div>
-      <div class="zb-card-img">
-        <img src="/images/akd-otazky-obalka.jpg" alt="Otázky metody JIH®" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
-        <div class="zb-card-body"><div class="zb-card-title">Otázky metody JIH®</div><div class="zb-card-text">Praktický průvodce nejčastějšími otázkami k práci s AKD metodou JIH®.</div></div>
-      </div>
-      <div class="zb-card-img">
-        <div class="zb-mat-mosaic">
-          <img src="/images/akd-barva-cervena-swatch.jpg" alt="Barva červená">
-          <img src="/images/akd-barva-oranzova-swatch.jpg" alt="Barva oranžová">
-          <img src="/images/akd-barva-zluta-swatch.jpg" alt="Barva žlutá">
-          <img src="/images/akd-barva-zelena-swatch.jpg" alt="Barva zelená">
-          <img src="/images/akd-barva-modra-swatch.jpg" alt="Barva modrá">
-        </div>
-        <div class="zb-card-body"><div class="zb-card-title">Pomocná skripta barev AKD</div><div class="zb-card-text">Průvodce všemi pěti barvami diagnostiky &ndash; co znamenají a jak je číst.</div></div>
-      </div>
-      <div class="zb-card-img">
-        <img src="/images/akd-vety-obalka.jpg" alt="Věty metody JIH® – zkracovače" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
-        <div class="zb-card-body"><div class="zb-card-title">Věty metody JIH® &ndash; zkracovače</div><div class="zb-card-text">Jednoduché věty, které tě vrací do vnitřního klidu a vědomého tvoření.</div></div>
-      </div>
-      <div class="zb-card-img">
-        <img src="/images/akd-casova-osa.jpg" alt="Časová osa AKD – prvotní příčiny" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center;border-radius:0;display:block;">
-        <div class="zb-card-body"><div class="zb-card-title">Časová osa AKD</div><div class="zb-card-text">Orientace v časové linii prvotních příčin pro hlubší diagnostiku.</div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="zb-gold-bar"></div>
-
-  <!-- CTA -->
-  <div class="zb-cta" id="zb-cta">
-    <div class="zb-label" style="text-align:center">Investice do sebe</div>
-    <div class="zb-cta-grid">
-      <div class="zb-cta-card">
-        <h3 class="zb-cta-card-title">🌿 AKD Standard</h3>
-        <div class="zb-price">18 900 Kč</div>
-        <div class="zb-price-sub">za 3 měsíce &middot; tj. 6 300 Kč měsíčně &middot; nejsem plátce DPH</div>
-        <ul class="zb-cta-recap">
-          <li>Kompletní online kurz i materiály</li>
-          <li>Každotýdenní Zoom + 2 konzultace v ceně</li>
-          <li>Přístup 2 roky po skončení kurzu</li>
-        </ul>
-        <a href="https://form.fapi.cz/?id=2658bd27-9dfa-432c-ade7-494d1bfb304f" class="zb-cta-btn">Chci se zapsat do kurzu</a>
-      </div>
-      <div class="zb-cta-card">
-        <h3 class="zb-cta-card-title">🌸 AKD s osobním vedením</h3>
-        <div class="zb-price">24 900 Kč</div>
-        <div class="zb-price-sub">za 3 měsíce &middot; tj. 8 300 Kč měsíčně &middot; nejsem plátce DPH</div>
-        <ul class="zb-cta-recap">
-          <li>Vše ze Standardu, jen osobněji a rychleji</li>
-          <li>Maximální individuální pozornost</li>
-          <li>Přístup 2 roky po skončení kurzu</li>
-        </ul>
-        <a href="https://form.fapi.cz/?id=22e0e7ff-4ec5-4ac2-8199-82576cd6938c" class="zb-cta-btn">Chci se zapsat do kurzu</a>
-      </div>
-    </div>
-    <p class="zb-guarantee">✓ Přístup získáš ihned po zaplacení &nbsp;·&nbsp; ✓ Materiály ti zůstanou k dispozici ještě 2 roky po skončení kurzu</p>
-    <p class="zb-guarantee" style="margin-top:0.5rem;">Odesláním objednávky souhlasíš s <a href="/obchodni-podminky/" style="color:var(--gold);">obchodními podmínkami</a> a <a href="/ochrana-osobnich-udaju/" style="color:var(--gold);">zpracováním osobních údajů</a>.</p>
-  </div>
-
-  <div class="zb-gold-bar"></div>
 
   <!-- ====================== SEKCE: FAQ ====================== -->
   <div class="zb-sec" id="faq">
