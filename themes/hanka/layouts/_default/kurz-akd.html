@@ -1053,15 +1053,20 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
     .zb-mat-mosaic{ display:grid; grid-template-columns:repeat(5,1fr); aspect-ratio:3/4; overflow:hidden; }
     .zb-mat-mosaic img{ width:100%; height:100%; object-fit:cover; display:block; }
     .zb-mat-mosaic-2{ grid-template-columns:repeat(2,1fr); }
-    .zb-mat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:1rem; }
+    .zb-mat-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:0.9rem; margin-top:1rem; }
+    .zb-mat-grid .zb-card-title{ font-size:13px; }
+    .zb-mat-grid .zb-card-text{ font-size:12px; line-height:1.5; }
+    .zb-mat-grid .zb-card-body{ padding:0.85rem 0.85rem 1.1rem; }
     @media (max-width:900px){
-      .zb-mat-grid{ grid-template-columns:repeat(2,1fr); }
+      .zb-mat-grid{ grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+      .zb-mat-grid .zb-card-title{ font-size:15px; }
+      .zb-mat-grid .zb-card-text{ font-size:13px; }
     }
     @media (max-width:640px){
       .zb-mat-hero-card{ width:100px; margin:0 -10px 1.5rem; }
       .zb-mat-hero-main{ width:130px; }
       .zb-mat-hero-wide{ width:140px; }
-      .zb-mat-grid{ grid-template-columns:1fr; }
+      .zb-mat-grid{ grid-template-columns:repeat(2,1fr); }
     }
   </style>
   <div class="zb-sec">
@@ -1099,13 +1104,6 @@ li, ul, ol { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--tex
       <div class="zb-card-img">
         <img src="/images/akd-vety-obalka.jpg" alt="Věty metody JIH® – zkracovače" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:0;display:block;">
         <div class="zb-card-body"><div class="zb-card-title">Věty metody JIH® &ndash; zkracovače</div><div class="zb-card-text">Jednoduché věty, které tě vrací do vnitřního klidu a vědomého tvoření.</div></div>
-      </div>
-      <div class="zb-card-img">
-        <div class="zb-mat-mosaic zb-mat-mosaic-2">
-          <img src="/images/akd-tahak-postup.jpg" alt="Tahák AKD – postup krok za krokem">
-          <img src="/images/akd-tahak-diagnostiky.jpg" alt="Tahák diagnostiky – otázky metody JIH®">
-        </div>
-        <div class="zb-card-body"><div class="zb-card-title">Taháky</div><div class="zb-card-text">Rychlá orientace v postupu i v otázkách diagnostiky, po ruce při každé praxi.</div></div>
       </div>
       <div class="zb-card-img">
         <img src="/images/akd-casova-osa.jpg" alt="Časová osa AKD – prvotní příčiny" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center;border-radius:0;display:block;">
